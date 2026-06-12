@@ -1,24 +1,19 @@
 # Our Story
 
-On Capacitor was founded on a straightforward principle: precision-engineered energy storage components should be available to every engineer, researcher, and manufacturer who needs them — without compromise on quality or lead time.
+On Capacitor was built around a single idea: that the most demanding electrical applications in the world deserve capacitors engineered specifically for them — not adapted from general-purpose designs.
 
 ## What We Do
 
-We design and manufacture high-performance capacitor systems for demanding applications across industrial automation, power electronics, medical devices, renewable energy, and research instrumentation.
+We manufacture three specialist product lines, each developed to meet the unique requirements of its application:
 
-Every product that leaves our facility has been engineered to perform consistently across its rated lifetime, under the conditions your application actually demands.
+**Induction Heating Capacitors** — resonant tank capacitors and capacitor banks for induction heating and induction melting systems. Our customers operate induction furnaces processing steel, iron, copper, aluminium, and precious metals, where continuous high-frequency operation and precise reactive power management are critical to productivity and uptime.
+
+**Pulse Capacitors** — high-energy, fast-discharge capacitors for pulsed power systems. These products are used in nuclear fusion energy research, where capacitor banks must store large amounts of energy and release it in sub-microsecond bursts with exceptional repeatability over millions of charge-discharge cycles.
+
+**High Voltage Capacitors** — shunt capacitor banks and harmonic filter capacitors for AC transmission and distribution substations. Designed and manufactured to GB/T and IEC standards, these products support reactive power compensation and power quality management in the electrical grid.
 
 ## Our Approach
 
-We don't believe in one-size-fits-all solutions. Our engineering team works closely with customers to understand their specific requirements — then we deliver a capacitor system that fits, rather than asking you to adapt your design to our catalog.
+We don't manufacture general-purpose components. Every product we make is designed for a specific operating environment — its voltage, frequency, thermal profile, duty cycle, and mechanical constraints all shape the design from the ground up.
 
-**Standard products** ship fast, tested to specification, ready to integrate.
-
-**Custom solutions** are engineered from the ground up for applications where standard components fall short.
-
-## Why Customers Choose Us
-
-- Direct access to our engineering team — no call centers
-- Transparent lead times and honest communication
-- ISO-aligned quality processes on every production run
-- Responsive support from inquiry through to after-sales
+Our engineering team works directly with customers at every stage: from initial specification through design reviews, prototype testing, and production qualification.

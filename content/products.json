@@ -1,44 +1,44 @@
 [
   {
-    "name": "Film Capacitor Series FC-100",
-    "category": "Film Capacitors",
-    "description": "High-voltage metallized polypropylene film capacitors for power electronics, inverters, and motor drives. Rated up to 1000V DC with exceptional self-healing characteristics.",
-    "image": "images/product-film.jpg",
+    "name": "Resonant Tank Capacitor — IH Series",
+    "category": "Induction Heating",
+    "description": "Water-cooled resonant capacitors designed for induction heating systems operating at 1 kHz to 400 kHz. Optimised for low ESR and high ripple current handling in hardening, brazing, annealing, and forging applications.",
+    "image": "images/product-ih-resonant.jpg",
     "link": "contact.html"
   },
   {
-    "name": "Electrolytic Capacitor EL-450",
-    "category": "Electrolytic",
-    "description": "Aluminium electrolytic capacitors optimized for high ripple current applications. Available in snap-in and screw-terminal configurations for industrial power supplies.",
-    "image": "images/product-electrolytic.jpg",
+    "name": "Induction Melting Capacitor Bank — IM Series",
+    "category": "Induction Heating",
+    "description": "Heavy-duty capacitor banks for coreless and channel induction furnaces melting steel, iron, copper, aluminium, and precious metals. Engineered for continuous operation under high reactive power loads with capacities from sub-tonne to 100-tonne furnaces.",
+    "image": "images/product-ih-melting.jpg",
     "link": "contact.html"
   },
   {
-    "name": "Supercapacitor Module SC-25F",
-    "category": "Supercapacitors",
-    "description": "25 Farad symmetric supercapacitor module for energy harvesting, UPS backup, and burst-power applications. Operating temperature range: -40°C to +65°C.",
-    "image": "images/product-super.jpg",
+    "name": "High Energy Pulse Capacitor — PF Series",
+    "category": "Pulse Capacitors",
+    "description": "Low-inductance, fast-discharge capacitors for pulsed power systems including inertial confinement fusion drivers and Z-pinch devices. Rated up to 100 kJ per unit with sub-microsecond discharge capability and high charge-discharge cycle life.",
+    "image": "images/product-pulse-pf.jpg",
     "link": "contact.html"
   },
   {
-    "name": "Ceramic Capacitor Array CA-SMD",
-    "category": "Ceramic",
-    "description": "Surface-mount multilayer ceramic capacitor arrays in 0402 to 1210 case sizes. X7R and C0G dielectrics available. Ideal for decoupling and filtering in PCB designs.",
-    "image": "images/product-ceramic.jpg",
+    "name": "Modular Pulse Capacitor Bank — PB Series",
+    "category": "Pulse Capacitors",
+    "description": "Scalable bank assemblies for large-scale pulsed power installations delivering terawatt-class instantaneous power. Designed for integration into fusion energy research facilities, railgun systems, and high-power microwave sources.",
+    "image": "images/product-pulse-bank.jpg",
     "link": "contact.html"
   },
   {
-    "name": "Custom Capacitor Module",
-    "category": "Custom Modules",
-    "description": "Fully custom-engineered capacitor assemblies designed to your exact specifications. Voltage, capacitance, form factor, and environmental ratings specified by you.",
-    "image": "images/product-custom.jpg",
+    "name": "Shunt Capacitor Bank — HV Series",
+    "category": "High Voltage",
+    "description": "Reactive power compensation capacitor banks for AC transmission and distribution substations. Available for 10 kV, 35 kV, 110 kV, and 220 kV systems. Dual-rated for power factor correction and harmonic filter tuning, compliant with GB/T and IEC standards.",
+    "image": "images/product-hv-shunt.jpg",
     "link": "contact.html"
   },
   {
-    "name": "Film Capacitor Series FC-500",
-    "category": "Film Capacitors",
-    "description": "Heavy-duty DC link capacitors for high-power converters and traction applications. Designed for 105°C ambient with extended service life exceeding 100,000 hours.",
-    "image": "images/product-film2.jpg",
+    "name": "Harmonic Filter Capacitor — HF Series",
+    "category": "High Voltage",
+    "description": "Tuned harmonic filter capacitors for substation installations where non-linear loads generate harmonic distortion. Configured with series reactors into C-type or single-tuned filter banks, protecting grid equipment and improving power quality.",
+    "image": "images/product-hv-filter.jpg",
     "link": "contact.html"
   }
 ]

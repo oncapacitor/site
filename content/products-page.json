@@ -1,32 +1,32 @@
 {
   "page_hero": {
     "title":    "Our Products",
-    "subtitle": "High-performance capacitor solutions engineered for reliability, precision, and longevity."
+    "subtitle": "Three specialist product lines — induction heating, pulse power, and high-voltage — each engineered to the exacting demands of its application."
   },
   "custom": {
     "tag":   "Custom Engineering",
-    "title": "Need something specific?",
+    "title": "Specifications that don't fit our catalogue?",
     "body":  [
-      "Standard products don't always fit unique challenges. Our engineering team works directly with you to design capacitor solutions built to your exact specifications — voltage, capacitance, form factor, temperature rating, and more.",
-      "From prototype to production, we support every stage of your product development with responsive technical expertise."
+      "Every installation is different. Our engineering team designs capacitor solutions to your exact voltage, capacitance, ESR, pulse width, cooling method, and form factor — from single prototype units to full production runs.",
+      "We work directly with your engineering team through design, testing, and commissioning, providing full technical documentation and after-sales support."
     ],
     "cta":   { "label": "Discuss Your Requirements", "href": "contact.html", "style": "btn-gold" },
     "features": [
       {
-        "icon":  "grid",
-        "title": "Custom Specifications",
-        "body":  "Any voltage, capacitance, or form factor. We design to your datasheet, not the other way around."
+        "icon":  "settings",
+        "title": "Fully Custom Design",
+        "body":  "Voltage, capacitance, ESR, form factor, cooling method — specified by you. We build to your datasheet."
       },
       {
         "icon":  "clock",
-        "title": "Fast Turnaround",
-        "body":  "Prototype samples in weeks, not months. We move fast without cutting corners on quality."
+        "title": "Prototype to Production",
+        "body":  "Sample units in weeks. Full production runs with consistent quality and traceable batch documentation."
       }
     ]
   },
   "cta": {
-    "title": "Ready to order or get a quote?",
-    "body":  "Contact our team with your specifications and we'll respond within one business day.",
+    "title": "Ready to discuss a project?",
+    "body":  "Send us your specifications and our engineers will respond within one business day.",
     "actions": [
       { "label": "Request a Quote", "href": "contact.html", "style": "btn-gold" }
     ]

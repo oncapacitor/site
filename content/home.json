@@ -15,24 +15,24 @@
     { "value": 40,  "suffix": "+", "label": "Countries Served" }
   ],
   "features": {
-    "tag":   "Why On Capacitor",
-    "title": "Built for Performance. Designed for Reliability.",
-    "lead":  "We combine decades of electrical engineering expertise with modern manufacturing to deliver capacitor solutions that exceed expectations.",
+    "tag":   "Three Specialist Product Lines",
+    "title": "Built for the World's Most Demanding Applications.",
+    "lead":  "From induction furnaces to fusion energy research to national grid infrastructure — we engineer capacitors where performance and reliability are non-negotiable.",
     "items": [
       {
         "icon":  "zap",
-        "title": "High Energy Density",
-        "body":  "Our capacitors deliver industry-leading energy density ratios, enabling compact designs without sacrificing performance or longevity."
+        "title": "Induction Heating",
+        "body":  "Resonant tank capacitors and capacitor banks for induction heating and induction melting systems. Engineered for continuous high-frequency, high-reactive-power operation in steel, aluminium, and precious metal foundries."
       },
       {
         "icon":  "shield",
-        "title": "Certified Quality",
-        "body":  "Every unit undergoes rigorous testing and quality control, meeting international safety and performance certifications across all product lines."
+        "title": "Pulse Power",
+        "body":  "High-energy, fast-discharge pulse capacitors for nuclear fusion research and other pulsed power applications. Designed to store and release enormous energy in sub-microsecond pulses, cycle after cycle."
       },
       {
         "icon":  "settings",
-        "title": "Custom Engineering",
-        "body":  "Standard solutions rarely fit unique challenges. Our engineers work directly with your team to design capacitors tailored to your exact specifications."
+        "title": "High Voltage",
+        "body":  "Shunt capacitor banks and harmonic filter capacitors for AC transmission and distribution substations. Available from 10 kV to 220 kV, compliant with GB/T and IEC standards."
       }
     ]
   },
@@ -48,8 +48,8 @@
   },
   "products_preview": {
     "tag":   "Our Products",
-    "title": "Solutions for Every Application",
-    "lead":  "From high-voltage film capacitors to custom supercapacitor modules — browse our full range or contact us to discuss your requirements.",
+    "title": "Induction Heating. Pulse Power. High Voltage.",
+    "lead":  "Three focused product lines, each engineered to the specific demands of its application — from metal foundries and fusion research to national grid substations.",
     "cta":   { "label": "View All Products", "href": "products.html", "style": "btn-gold" }
   },
   "cta": {
