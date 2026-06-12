@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Film Capacitor Series FC-100",
+    "category": "Film Capacitors",
+    "description": "High-voltage metallized polypropylene film capacitors for power electronics, inverters, and motor drives. Rated up to 1000V DC with exceptional self-healing characteristics.",
+    "image": "images/product-film.jpg",
+    "link": "contact.html"
+  },
+  {
+    "name": "Electrolytic Capacitor EL-450",
+    "category": "Electrolytic",
+    "description": "Aluminium electrolytic capacitors optimized for high ripple current applications. Available in snap-in and screw-terminal configurations for industrial power supplies.",
+    "image": "images/product-electrolytic.jpg",
+    "link": "contact.html"
+  },
+  {
+    "name": "Supercapacitor Module SC-25F",
+    "category": "Supercapacitors",
+    "description": "25 Farad symmetric supercapacitor module for energy harvesting, UPS backup, and burst-power applications. Operating temperature range: -40°C to +65°C.",
+    "image": "images/product-super.jpg",
+    "link": "contact.html"
+  },
+  {
+    "name": "Ceramic Capacitor Array CA-SMD",
+    "category": "Ceramic",
+    "description": "Surface-mount multilayer ceramic capacitor arrays in 0402 to 1210 case sizes. X7R and C0G dielectrics available. Ideal for decoupling and filtering in PCB designs.",
+    "image": "images/product-ceramic.jpg",
+    "link": "contact.html"
+  },
+  {
+    "name": "Custom Capacitor Module",
+    "category": "Custom Modules",
+    "description": "Fully custom-engineered capacitor assemblies designed to your exact specifications. Voltage, capacitance, form factor, and environmental ratings specified by you.",
+    "image": "images/product-custom.jpg",
+    "link": "contact.html"
+  },
+  {
+    "name": "Film Capacitor Series FC-500",
+    "category": "Film Capacitors",
+    "description": "Heavy-duty DC link capacitors for high-power converters and traction applications. Designed for 105°C ambient with extended service life exceeding 100,000 hours.",
+    "image": "images/product-film2.jpg",
+    "link": "contact.html"
+  }
+]

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — On Capacitor</title>
+  <meta name="description" content="Browse On Capacitor's full range of high-performance capacitor solutions for every application.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="nav scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#0e7afe"/>
+        <rect x="9" y="8" width="3" height="16" rx="1.5" fill="white"/>
+        <rect x="20" y="8" width="3" height="16" rx="1.5" fill="white"/>
+        <path d="M12 16 H20" stroke="#f0a500" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      On<span class="accent">Capacitor</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="products.html">Products</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- ── Page Hero ───────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <span>Products</span>
+    </nav>
+    <h1>Our Products</h1>
+    <p>High-performance capacitor solutions engineered for reliability, precision, and longevity.</p>
+  </div>
+</section>
+
+<!-- ── Filter bar ──────────────────────────────────────── -->
+<section class="section--alt" style="padding:24px 0;">
+  <div class="container">
+    <div id="filter-bar" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:4px;">Filter:</span>
+      <button class="filter-btn active" data-filter="all">All Products</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── Products grid ───────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <!--
+      Products are loaded from content/products.json
+      To add or edit products, open that file and follow the format.
+      No code changes needed here.
+    -->
+    <div id="products-grid" class="products-grid"></div>
+    <div id="products-empty" style="display:none;text-align:center;padding:80px 0;color:var(--text-muted);">
+      No products found in this category.
+    </div>
+  </div>
+</section>
+
+<!-- ── Custom solutions CTA ────────────────────────────── -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="split">
+      <div class="fade-up">
+        <div class="tag">Custom Engineering</div>
+        <h2 class="section-title">Need something specific?</h2>
+        <p style="color:var(--gray-300);margin-bottom:24px;font-size:1.05rem;">
+          Standard products don't always fit unique challenges. Our engineering team works directly with you to design capacitor solutions built to your exact specifications — voltage, capacitance, form factor, temperature rating, and more.
+        </p>
+        <p style="color:var(--gray-300);margin-bottom:32px;font-size:1.05rem;">
+          From prototype to production, we support every stage of your product development with responsive technical expertise.
+        </p>
+        <a href="contact.html" class="btn btn-gold">Discuss Your Requirements</a>
+      </div>
+      <div class="features-grid fade-up" style="grid-template-columns:1fr;">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Custom Specifications</h3>
+          <p>Any voltage, capacitance, or form factor. We design to your datasheet, not the other way around.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>Fast Turnaround</h3>
+          <p>Prototype samples in weeks, not months. We move fast without cutting corners on quality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Banner ──────────────────────────────────────── -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Ready to order or get a quote?</h2>
+    <p>Contact our team with your specifications and we'll respond within one business day.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-gold">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="#0e7afe"/>
+            <rect x="9" y="8" width="3" height="16" rx="1.5" fill="white"/>
+            <rect x="20" y="8" width="3" height="16" rx="1.5" fill="white"/>
+            <path d="M12 16 H20" stroke="#f0a500" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          On<span class="accent">Capacitor</span>
+        </a>
+        <p>Precision capacitor solutions for industrial, commercial, and research applications worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="products.html">Film Capacitors</a></li>
+          <li><a href="products.html">Electrolytic</a></li>
+          <li><a href="products.html">Supercapacitors</a></li>
+          <li><a href="products.html">Custom Modules</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@oncapacitor.com">info@oncapacitor.com</a></li>
+          <li><a href="contact.html">Send a Message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> On Capacitor. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter / X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+.filter-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--gray-300);
+  background: var(--white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font);
+}
+.filter-btn:hover { border-color: var(--blue); color: var(--blue); }
+.filter-btn.active { background: var(--blue); border-color: var(--blue); color: var(--white); }
+</style>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+// Products page: adds category filter buttons after products load
+const origLoadProducts = window._loadProductsDone;
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('products-grid');
+  const filterBar = document.getElementById('filter-bar');
+  const empty = document.getElementById('products-empty');
+
+  // Override products load to also build filters
+  const interval = setInterval(() => {
+    const cards = grid?.querySelectorAll('.product-card');
+    if (!cards?.length) return;
+    clearInterval(interval);
+
+    // Collect unique categories
+    const cats = new Set();
+    cards.forEach(c => {
+      const tag = c.querySelector('.product-card-tag')?.textContent?.trim();
+      if (tag) cats.add(tag);
+    });
+
+    cats.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn';
+      btn.dataset.filter = cat;
+      btn.textContent = cat;
+      filterBar.appendChild(btn);
+    });
+
+    filterBar.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      let visible = 0;
+      cards.forEach(card => {
+        const tag = card.querySelector('.product-card-tag')?.textContent?.trim();
+        const show = filter === 'all' || tag === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      empty.style.display = visible === 0 ? 'block' : 'none';
+    });
+  }, 200);
+});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
