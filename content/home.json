@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "eyebrow": "Precision Energy Storage",
+    "title": "Power Solutions Built for <span class='highlight'>Tomorrow's Demands</span>",
+    "subtitle": "On Capacitor engineers high-performance capacitor systems for industrial, commercial, and R&D applications — delivering reliability where it matters most.",
+    "cta": [
+      { "label": "Explore Products", "href": "products.html", "style": "btn-gold" },
+      { "label": "Get in Touch",     "href": "contact.html",  "style": "btn-outline" }
+    ]
+  },
+  "stats": [
+    { "value": 15,  "suffix": "+", "label": "Years of Experience" },
+    { "value": 500, "suffix": "+", "label": "Products Shipped" },
+    { "value": 98,  "suffix": "%", "label": "Customer Satisfaction" },
+    { "value": 40,  "suffix": "+", "label": "Countries Served" }
+  ],
+  "features": {
+    "tag":   "Why On Capacitor",
+    "title": "Built for Performance. Designed for Reliability.",
+    "lead":  "We combine decades of electrical engineering expertise with modern manufacturing to deliver capacitor solutions that exceed expectations.",
+    "items": [
+      {
+        "icon":  "zap",
+        "title": "High Energy Density",
+        "body":  "Our capacitors deliver industry-leading energy density ratios, enabling compact designs without sacrificing performance or longevity."
+      },
+      {
+        "icon":  "shield",
+        "title": "Certified Quality",
+        "body":  "Every unit undergoes rigorous testing and quality control, meeting international safety and performance certifications across all product lines."
+      },
+      {
+        "icon":  "settings",
+        "title": "Custom Engineering",
+        "body":  "Standard solutions rarely fit unique challenges. Our engineers work directly with your team to design capacitors tailored to your exact specifications."
+      }
+    ]
+  },
+  "about_teaser": {
+    "tag":   "Our Story",
+    "title": "Decades of Expertise in Capacitor Technology",
+    "body":  [
+      "On Capacitor was founded on a simple belief: that precision-engineered energy storage components should be accessible to every engineer, researcher, and manufacturer who needs them.",
+      "From our facility, we design and manufacture capacitor systems that power everything from industrial automation to cutting-edge research equipment — with the same commitment to quality on every order."
+    ],
+    "cta":   { "label": "Learn About Us", "href": "about.html", "style": "btn-primary" },
+    "image": "images/about-team.jpg"
+  },
+  "products_preview": {
+    "tag":   "Our Products",
+    "title": "Solutions for Every Application",
+    "lead":  "From high-voltage film capacitors to custom supercapacitor modules — browse our full range or contact us to discuss your requirements.",
+    "cta":   { "label": "View All Products", "href": "products.html", "style": "btn-gold" }
+  },
+  "cta": {
+    "title": "Ready to power your next project?",
+    "body":  "Talk to our engineering team and find the right capacitor solution for your application.",
+    "actions": [
+      { "label": "Request a Quote",  "href": "contact.html",  "style": "btn-gold" },
+      { "label": "Browse Products",  "href": "products.html", "style": "btn-outline" }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "page_hero": {
+    "title":    "About On Capacitor",
+    "subtitle": "Precision engineering. Trusted by industry. Driven by innovation."
+  },
+  "story": {
+    "image": "images/about-facility.jpg"
+  },
+  "values": {
+    "tag":   "Our Values",
+    "title": "What Drives Everything We Do",
+    "items": [
+      {
+        "icon":  "check-badge",
+        "title": "Precision First",
+        "body":  "Every specification matters. We engineer to tolerances that ensure consistent, predictable performance across the lifetime of each component."
+      },
+      {
+        "icon":  "users",
+        "title": "Partnership Mindset",
+        "body":  "We build lasting relationships with our customers, acting as a technical partner rather than just a supplier — from design to delivery and beyond."
+      },
+      {
+        "icon":  "globe",
+        "title": "Global Reach",
+        "body":  "With customers in over 40 countries, we understand the demands of international supply chains and deliver with the reliability global operations require."
+      }
+    ]
+  },
+  "stats": [
+    { "value": 15,  "suffix": "+", "label": "Years in Business" },
+    { "value": 500, "suffix": "+", "label": "Products Delivered" },
+    { "value": 40,  "suffix": "+", "label": "Countries Served" },
+    { "value": 12,  "suffix": "",  "label": "Engineers on Team" }
+  ],
+  "team": {
+    "tag":   "The Team",
+    "title": "Meet the People Behind On Capacitor",
+    "lead":  "A small, focused team of engineers and specialists dedicated to precision and quality.",
+    "members": [
+      { "name": "Your Name",       "role": "Founder & CEO",          "image": "images/team-1.jpg" },
+      { "name": "Lead Engineer",   "role": "Head of Engineering",     "image": "images/team-2.jpg" },
+      { "name": "Operations Lead", "role": "Supply Chain & Quality",  "image": "images/team-3.jpg" },
+      { "name": "Sales Director",  "role": "Customer Partnerships",   "image": "images/team-4.jpg" }
+    ]
+  },
+  "cta": {
+    "title": "Want to work with us?",
+    "body":  "Whether you need a standard product or a fully custom solution, our team is ready to help.",
+    "actions": [
+      { "label": "Get in Touch",   "href": "contact.html",  "style": "btn-gold" },
+      { "label": "View Products",  "href": "products.html", "style": "btn-outline" }
+    ]
+  }
+}

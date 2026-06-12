@@ -1,0 +1,43 @@
+{
+  "company": "On Capacitor",
+  "tagline": "Precision capacitor solutions for industrial, commercial, and research applications worldwide.",
+  "email": "info@oncapacitor.com",
+  "phone": "+1 (555) 000-0000",
+  "location": "Your City, State, Country",
+  "nav": [
+    { "label": "Home",     "href": "index.html" },
+    { "label": "About Us", "href": "about.html" },
+    { "label": "Products", "href": "products.html" }
+  ],
+  "footer_columns": [
+    {
+      "heading": "Company",
+      "links": [
+        { "label": "About Us", "href": "about.html" },
+        { "label": "Products", "href": "products.html" },
+        { "label": "Contact",  "href": "contact.html" }
+      ]
+    },
+    {
+      "heading": "Products",
+      "links": [
+        { "label": "Film Capacitors", "href": "products.html" },
+        { "label": "Electrolytic",    "href": "products.html" },
+        { "label": "Supercapacitors", "href": "products.html" },
+        { "label": "Custom Modules",  "href": "products.html" }
+      ]
+    },
+    {
+      "heading": "Contact",
+      "links": [
+        { "label": "info@oncapacitor.com", "href": "mailto:info@oncapacitor.com" },
+        { "label": "Send a Message",       "href": "contact.html" }
+      ]
+    }
+  ],
+  "social": [
+    { "label": "LinkedIn", "href": "#", "icon": "linkedin" },
+    { "label": "Twitter",  "href": "#", "icon": "twitter" }
+  ],
+  "copyright": "On Capacitor. All rights reserved."
+}

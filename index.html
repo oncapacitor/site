@@ -11,247 +11,51 @@
 </head>
 <body>
 
-<!-- ── Navigation ─────────────────────────────────────── -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <!-- Replace the SVG below with your own logo image: <img src="images/logo.svg" alt="On Capacitor"> -->
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" rx="8" fill="#0e7afe"/>
-        <rect x="9" y="8" width="3" height="16" rx="1.5" fill="white"/>
-        <rect x="20" y="8" width="3" height="16" rx="1.5" fill="white"/>
-        <path d="M12 16 H20" stroke="#f0a500" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-      On<span class="accent">Capacitor</span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html" class="btn btn-primary">Contact Us</a>
-    </div>
-    <button class="nav-hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="nav-mobile">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="products.html">Products</a>
-  <a href="contact.html">Contact Us</a>
-</div>
+<nav class="nav" id="nav"></nav>
+<div class="nav-mobile" id="nav-mobile"></div>
 
-<!-- ── Hero ───────────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-media">
-    <!--
-      OPTION A — background video:
-      <video autoplay muted loop playsinline>
-        <source src="videos/hero.mp4" type="video/mp4">
-      </video>
-
-      OPTION B — background image:
-      <img src="images/hero-bg.jpg" alt="">
-
-      Remove the comment tags and add your file. Both options work.
-    -->
-    <img src="images/hero-bg.jpg" alt="" onerror="this.style.display='none'">
+    <!-- Add hero background: <img src="images/hero-bg.jpg" alt=""> or <video autoplay muted loop playsinline><source src="videos/hero.mp4" type="video/mp4"></video> -->
   </div>
   <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <!--
-      Edit content/home.md to update the text below — no code needed.
-      The hero title/subtitle here are static for best performance;
-      change them directly in this file.
-    -->
-    <span class="hero-eyebrow">Precision Energy Storage</span>
-    <h1 class="hero-title">
-      Power Solutions Built for<br>
-      <span class="highlight">Tomorrow's Demands</span>
-    </h1>
-    <p class="hero-subtitle">
-      On Capacitor engineers high-performance capacitor systems for industrial, commercial, and R&D applications — delivering reliability where it matters most.
-    </p>
-    <div class="hero-actions">
-      <a href="products.html" class="btn btn-gold">Explore Products</a>
-      <a href="contact.html" class="btn btn-outline">Get in Touch</a>
-    </div>
-  </div>
+  <div class="hero-content" id="hero"></div>
   <div class="hero-scroll">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     Scroll
   </div>
 </section>
 
-<!-- ── Stats bar ───────────────────────────────────────── -->
 <div class="stats-bar">
   <div class="container">
-    <div class="stats-grid">
-      <div>
-        <div class="stat-number" data-count="15" data-suffix="+">0+</div>
-        <div class="stat-label">Years of Experience</div>
-      </div>
-      <div>
-        <div class="stat-number" data-count="500" data-suffix="+">0+</div>
-        <div class="stat-label">Products Shipped</div>
-      </div>
-      <div>
-        <div class="stat-number" data-count="98" data-suffix="%">0%</div>
-        <div class="stat-label">Customer Satisfaction</div>
-      </div>
-      <div>
-        <div class="stat-number" data-count="40" data-suffix="+">0+</div>
-        <div class="stat-label">Countries Served</div>
-      </div>
-    </div>
+    <div class="stats-grid" id="stats"></div>
   </div>
 </div>
 
-<!-- ── Features ────────────────────────────────────────── -->
 <section class="section">
-  <div class="container">
-    <div class="fade-up">
-      <div class="tag">Why On Capacitor</div>
-      <h2 class="section-title">Built for Performance. Designed for Reliability.</h2>
-      <p class="section-lead">We combine decades of electrical engineering expertise with modern manufacturing to deliver capacitor solutions that exceed expectations.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card fade-up">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        </div>
-        <h3>High Energy Density</h3>
-        <p>Our capacitors deliver industry-leading energy density ratios, enabling compact designs without sacrificing performance or longevity.</p>
-      </div>
-      <div class="feature-card fade-up">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
-        <h3>Certified Quality</h3>
-        <p>Every unit undergoes rigorous testing and quality control, meeting international safety and performance certifications across all product lines.</p>
-      </div>
-      <div class="feature-card fade-up">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <h3>Custom Engineering</h3>
-        <p>Standard solutions rarely fit unique challenges. Our engineers work directly with your team to design capacitors tailored to your exact specifications.</p>
-      </div>
-    </div>
-  </div>
+  <div class="container" id="features"></div>
 </section>
 
-<!-- ── Split — About teaser ────────────────────────────── -->
 <section class="section section--alt">
   <div class="container">
-    <div class="split">
-      <div class="split-img fade-up">
-        <!--
-          Replace with your image: <img src="images/about-team.jpg" alt="Our team">
-        -->
-        <img src="images/about-team.jpg" alt="Our team" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'><svg xmlns=\'http://www.w3.org/2000/svg\' width=\'48\' height=\'48\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'rgba(255,255,255,0.3)\' stroke-width=\'1\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg></div>'">
-      </div>
-      <div class="fade-up">
-        <div class="tag">Our Story</div>
-        <h2 class="section-title">Decades of Expertise in Capacitor Technology</h2>
-        <p style="color:var(--text-muted);margin-bottom:24px;font-size:1.05rem;">
-          On Capacitor was founded on a simple belief: that precision-engineered energy storage components should be accessible to every engineer, researcher, and manufacturer who needs them.
-        </p>
-        <p style="color:var(--text-muted);margin-bottom:32px;font-size:1.05rem;">
-          From our facility, we design and manufacture capacitor systems that power everything from industrial automation to cutting-edge research equipment — with the same commitment to quality on every order.
-        </p>
-        <a href="about.html" class="btn btn-primary">Learn About Us</a>
-      </div>
-    </div>
+    <div class="split" id="about-teaser"></div>
   </div>
 </section>
 
-<!-- ── Product highlight ────────────────────────────────── -->
 <section class="section section--dark">
   <div class="container">
-    <div class="fade-up" style="text-align:center;max-width:600px;margin:0 auto 56px;">
-      <div class="tag">Our Products</div>
-      <h2 class="section-title">Solutions for Every Application</h2>
-      <p class="section-lead">From high-voltage film capacitors to custom supercapacitor modules — browse our full range or contact us to discuss your requirements.</p>
-    </div>
-    <!-- First 3 products rendered from products.json -->
-    <div id="products-grid" class="products-grid"></div>
-    <div style="text-align:center;margin-top:48px;" class="fade-up">
-      <a href="products.html" class="btn btn-gold">View All Products</a>
-    </div>
+    <div class="fade-up" style="text-align:center;max-width:600px;margin:0 auto 56px;" id="products-header"></div>
+    <div class="products-grid" id="products-grid"></div>
+    <div style="text-align:center;margin-top:48px;" class="fade-up" id="products-cta"></div>
   </div>
 </section>
 
-<!-- ── CTA Banner ──────────────────────────────────────── -->
 <section class="cta-banner">
-  <div class="container">
-    <h2>Ready to power your next project?</h2>
-    <p>Talk to our engineering team and find the right capacitor solution for your application.</p>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-gold">Request a Quote</a>
-      <a href="products.html" class="btn btn-outline">Browse Products</a>
-    </div>
-  </div>
+  <div class="container" id="cta"></div>
 </section>
 
-<!-- ── Footer ──────────────────────────────────────────── -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" rx="8" fill="#0e7afe"/>
-            <rect x="9" y="8" width="3" height="16" rx="1.5" fill="white"/>
-            <rect x="20" y="8" width="3" height="16" rx="1.5" fill="white"/>
-            <path d="M12 16 H20" stroke="#f0a500" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-          On<span class="accent">Capacitor</span>
-        </a>
-        <p>Precision capacitor solutions for industrial, commercial, and research applications worldwide.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Products</h5>
-        <ul>
-          <li><a href="products.html">Film Capacitors</a></li>
-          <li><a href="products.html">Electrolytic</a></li>
-          <li><a href="products.html">Supercapacitors</a></li>
-          <li><a href="products.html">Custom Modules</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <ul>
-          <!-- Edit these to match your actual contact info -->
-          <li><a href="mailto:info@oncapacitor.com">info@oncapacitor.com</a></li>
-          <li><a href="contact.html">Send a Message</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> On Capacitor. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="#" aria-label="Twitter / X">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+<footer class="footer" id="footer"></footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="js/main.js"></script>
 </body>
 </html>

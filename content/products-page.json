@@ -1,0 +1,34 @@
+{
+  "page_hero": {
+    "title":    "Our Products",
+    "subtitle": "High-performance capacitor solutions engineered for reliability, precision, and longevity."
+  },
+  "custom": {
+    "tag":   "Custom Engineering",
+    "title": "Need something specific?",
+    "body":  [
+      "Standard products don't always fit unique challenges. Our engineering team works directly with you to design capacitor solutions built to your exact specifications — voltage, capacitance, form factor, temperature rating, and more.",
+      "From prototype to production, we support every stage of your product development with responsive technical expertise."
+    ],
+    "cta":   { "label": "Discuss Your Requirements", "href": "contact.html", "style": "btn-gold" },
+    "features": [
+      {
+        "icon":  "grid",
+        "title": "Custom Specifications",
+        "body":  "Any voltage, capacitance, or form factor. We design to your datasheet, not the other way around."
+      },
+      {
+        "icon":  "clock",
+        "title": "Fast Turnaround",
+        "body":  "Prototype samples in weeks, not months. We move fast without cutting corners on quality."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to order or get a quote?",
+    "body":  "Contact our team with your specifications and we'll respond within one business day.",
+    "actions": [
+      { "label": "Request a Quote", "href": "contact.html", "style": "btn-gold" }
+    ]
+  }
+}

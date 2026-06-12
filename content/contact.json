@@ -1,0 +1,24 @@
+{
+  "page_hero": {
+    "title":    "Get in Touch",
+    "subtitle": "Have a question, need a quote, or want to discuss a custom solution? We'd love to hear from you."
+  },
+  "tag":   "Contact Information",
+  "title": "Let's Talk",
+  "details": [
+    { "icon": "mail",    "label": "Email",         "value": "info@oncapacitor.com", "href": "mailto:info@oncapacitor.com" },
+    { "icon": "phone",   "label": "Phone",         "value": "+1 (555) 000-0000" },
+    { "icon": "map-pin", "label": "Location",      "value": "Your City, State, Country" },
+    { "icon": "clock",   "label": "Response Time", "value": "Within 1 business day" }
+  ],
+  "form": {
+    "action": "https://formspree.io/f/YOUR_FORMSPREE_ID",
+    "subjects": [
+      "Product Inquiry",
+      "Request a Quote",
+      "Custom Engineering",
+      "Technical Support",
+      "Other"
+    ]
+  }
+}

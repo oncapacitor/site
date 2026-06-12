@@ -11,125 +11,27 @@
 </head>
 <body>
 
-<!-- ── Navigation ─────────────────────────────────────── -->
-<nav class="nav scrolled">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" rx="8" fill="#0e7afe"/>
-        <rect x="9" y="8" width="3" height="16" rx="1.5" fill="white"/>
-        <rect x="20" y="8" width="3" height="16" rx="1.5" fill="white"/>
-        <path d="M12 16 H20" stroke="#f0a500" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-      On<span class="accent">Capacitor</span>
-    </a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html" class="btn btn-primary">Contact Us</a>
-    </div>
-    <button class="nav-hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="nav-mobile">
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="products.html">Products</a>
-  <a href="contact.html">Contact Us</a>
-</div>
+<nav class="nav scrolled" id="nav"></nav>
+<div class="nav-mobile" id="nav-mobile"></div>
 
-<!-- ── Page Hero ───────────────────────────────────────── -->
 <section class="page-hero">
-  <div class="container">
-    <nav class="breadcrumb">
-      <a href="index.html">Home</a>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-      <span>Contact Us</span>
-    </nav>
-    <h1>Get in Touch</h1>
-    <p>Have a question, need a quote, or want to discuss a custom solution? We'd love to hear from you.</p>
-  </div>
+  <div class="container" id="page-hero"></div>
 </section>
 
-<!-- ── Contact section ─────────────────────────────────── -->
 <section class="section">
   <div class="container">
     <div class="contact-grid">
 
-      <!-- Left: info -->
       <div class="fade-up">
-        <div class="tag">Contact Information</div>
-        <h2 class="section-title">Let's Talk</h2>
-        <!--
-          Edit content/contact.md to update the intro text below.
-        -->
-        <div data-md="content/contact.md"></div>
-
-        <div style="margin-top:32px;">
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </div>
-            <div class="contact-detail-text">
-              <strong>Email</strong>
-              <!-- Update this email address -->
-              <span><a href="mailto:info@oncapacitor.com" style="color:var(--blue)">info@oncapacitor.com</a></span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            </div>
-            <div class="contact-detail-text">
-              <strong>Phone</strong>
-              <!-- Update this phone number -->
-              <span>+1 (555) 000-0000</span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            </div>
-            <div class="contact-detail-text">
-              <strong>Location</strong>
-              <!-- Update your address -->
-              <span>Your City, State, Country</span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <div class="contact-detail-text">
-              <strong>Response Time</strong>
-              <span>Within 1 business day</span>
-            </div>
-          </div>
-        </div>
+        <div class="tag" id="contact-tag"></div>
+        <h2 class="section-title" id="contact-title"></h2>
+        <!-- Prose intro from content/contact.md -->
+        <div data-md="content/contact.md" style="margin-bottom:32px;"></div>
+        <div id="contact-details"></div>
       </div>
 
-      <!-- Right: form -->
       <div class="fade-up">
-        <!--
-          This form uses Formspree (free tier — no backend needed).
-          Steps to activate:
-            1. Go to https://formspree.io and create a free account.
-            2. Create a new form and copy your form endpoint URL.
-            3. Replace "YOUR_FORMSPREE_ID" in the action below with your endpoint.
-          Example: action="https://formspree.io/f/xpwzabcd"
-        -->
-        <form
-          id="contact-form"
-          class="contact-form"
-          action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-          method="POST"
-        >
+        <form id="contact-form" class="contact-form" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="first-name">First Name *</label>
@@ -140,38 +42,23 @@
               <input type="text" id="last-name" name="last_name" required placeholder="Smith">
             </div>
           </div>
-
           <div class="form-group">
             <label for="email">Email Address *</label>
             <input type="email" id="email" name="email" required placeholder="jane@company.com">
           </div>
-
           <div class="form-group">
             <label for="company">Company</label>
             <input type="text" id="company" name="company" placeholder="Acme Corp">
           </div>
-
           <div class="form-group">
             <label for="subject">Subject *</label>
-            <select id="subject" name="subject" required>
-              <option value="" disabled selected>Select a topic…</option>
-              <option>Product Inquiry</option>
-              <option>Request a Quote</option>
-              <option>Custom Engineering</option>
-              <option>Technical Support</option>
-              <option>Other</option>
-            </select>
+            <select id="subject" name="subject" required></select>
           </div>
-
           <div class="form-group">
             <label for="message">Message *</label>
             <textarea id="message" name="message" required placeholder="Tell us about your project or question…"></textarea>
           </div>
-
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
-            Send Message
-          </button>
-
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
           <div id="form-success" class="form-success">
             ✓ Message sent! We'll get back to you within one business day.
           </div>
@@ -182,62 +69,8 @@
   </div>
 </section>
 
-<!-- ── Footer ──────────────────────────────────────────── -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" rx="8" fill="#0e7afe"/>
-            <rect x="9" y="8" width="3" height="16" rx="1.5" fill="white"/>
-            <rect x="20" y="8" width="3" height="16" rx="1.5" fill="white"/>
-            <path d="M12 16 H20" stroke="#f0a500" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-          On<span class="accent">Capacitor</span>
-        </a>
-        <p>Precision capacitor solutions for industrial, commercial, and research applications worldwide.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Products</h5>
-        <ul>
-          <li><a href="products.html">Film Capacitors</a></li>
-          <li><a href="products.html">Electrolytic</a></li>
-          <li><a href="products.html">Supercapacitors</a></li>
-          <li><a href="products.html">Custom Modules</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="mailto:info@oncapacitor.com">info@oncapacitor.com</a></li>
-          <li><a href="contact.html">Send a Message</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> On Capacitor. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="#" aria-label="Twitter / X">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+<footer class="footer" id="footer"></footer>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="js/main.js"></script>
 </body>
 </html>
