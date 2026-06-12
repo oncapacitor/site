@@ -1,44 +1,116 @@
 [
   {
+    "id": "ih-resonant",
     "name": "Resonant Tank Capacitor — IH Series",
     "category": "Induction Heating",
     "description": "Water-cooled resonant capacitors for induction heating systems from 1 kHz to 400 kHz. Low ESR, high ripple current, suited for hardening, brazing, and forging.",
+    "overview": "The IH Series resonant tank capacitors are designed for the demanding environment of induction heating equipment. Water cooling allows continuous operation at maximum rated current without derating. The low-inductance construction minimises stray reactance in high-frequency resonant circuits.",
+    "applications": ["Induction hardening", "Brazing and soldering", "Annealing", "Forging and hot forming"],
     "image": "images/product-ih-resonant.jpg",
-    "link": "contact.html"
+    "specs": [
+      { "label": "Capacitance Range",     "value": "TBD" },
+      { "label": "Rated Voltage (DC)",    "value": "TBD" },
+      { "label": "Frequency Range",       "value": "TBD" },
+      { "label": "Peak Current",          "value": "TBD" },
+      { "label": "Cooling Method",        "value": "Water cooled" },
+      { "label": "Dielectric Type",       "value": "TBD" },
+      { "label": "Operating Temperature", "value": "TBD" },
+      { "label": "Standards",             "value": "TBD" }
+    ]
   },
   {
+    "id": "ih-melting",
     "name": "Induction Melting Capacitor Bank — IM Series",
     "category": "Induction Heating",
     "description": "Capacitor banks for coreless and channel induction furnaces. Continuous operation under high reactive power loads, from sub-tonne to 100-tonne furnace capacities.",
+    "overview": "The IM Series capacitor banks provide reactive power compensation and power factor correction for coreless and channel induction furnaces. Modular construction allows flexible bank sizing to match furnace power requirements. Built for 24/7 foundry operation with minimal maintenance intervals.",
+    "applications": ["Steel and iron melting", "Copper and aluminium melting", "Precious metal refining", "Continuous casting"],
     "image": "images/product-ih-melting.jpg",
-    "link": "contact.html"
+    "specs": [
+      { "label": "Bank Capacitance",      "value": "TBD" },
+      { "label": "Rated Voltage",         "value": "TBD" },
+      { "label": "Reactive Power Output", "value": "TBD" },
+      { "label": "Operating Frequency",   "value": "TBD" },
+      { "label": "Cooling Method",        "value": "TBD" },
+      { "label": "Furnace Capacity",      "value": "Sub-tonne to 100 t" },
+      { "label": "Operating Temperature", "value": "TBD" },
+      { "label": "Standards",             "value": "TBD" }
+    ]
   },
   {
+    "id": "pulse-pf",
     "name": "High Energy Pulse Capacitor — PF Series",
     "category": "Pulse Capacitors",
     "description": "Low-inductance, fast-discharge capacitors for fusion drivers and Z-pinch devices. Up to 100 kJ per unit, sub-microsecond discharge, high cycle life.",
+    "overview": "The PF Series pulse capacitors are engineered for pulsed power systems where energy must be stored and released with extreme speed and precision. The low-inductance design minimises rise time, while the robust construction supports millions of charge-discharge cycles without significant degradation.",
+    "applications": ["Inertial confinement fusion drivers", "Z-pinch and plasma compression", "High-power microwave sources", "Electromagnetic launch systems"],
     "image": "images/product-pulse-pf.jpg",
-    "link": "contact.html"
+    "specs": [
+      { "label": "Capacitance",           "value": "TBD" },
+      { "label": "Rated Voltage",         "value": "TBD" },
+      { "label": "Peak Energy (per unit)", "value": "Up to 100 kJ" },
+      { "label": "Discharge Time (10–90%)", "value": "TBD" },
+      { "label": "ESR",                   "value": "TBD" },
+      { "label": "ESL",                   "value": "TBD" },
+      { "label": "Cycle Life",            "value": "TBD" },
+      { "label": "Operating Temperature", "value": "TBD" }
+    ]
   },
   {
+    "id": "pulse-bank",
     "name": "Modular Pulse Capacitor Bank — PB Series",
     "category": "Pulse Capacitors",
     "description": "Scalable assemblies for large-scale pulsed power installations. Designed for fusion energy research facilities and high-power applications requiring terawatt-class instantaneous output.",
+    "overview": "The PB Series modular banks are built for large-scale pulsed power installations where multiple capacitor units must fire synchronously. Each module is individually switchable and protected, enabling precise energy delivery control. The system architecture supports incremental capacity expansion.",
+    "applications": ["Fusion energy research facilities", "National laboratory pulsed power systems", "High-power microwave and laser drivers", "Defence research"],
     "image": "images/product-pulse-bank.jpg",
-    "link": "contact.html"
+    "specs": [
+      { "label": "Total Bank Energy",     "value": "TBD" },
+      { "label": "Rated Voltage",         "value": "TBD" },
+      { "label": "Peak Power Output",     "value": "TBD" },
+      { "label": "Number of Modules",     "value": "TBD" },
+      { "label": "Synchronisation",       "value": "TBD" },
+      { "label": "Discharge Time",        "value": "TBD" },
+      { "label": "Cooling Method",        "value": "TBD" },
+      { "label": "Standards",             "value": "TBD" }
+    ]
   },
   {
+    "id": "hv-shunt",
     "name": "Shunt Capacitor Bank — HV Series",
     "category": "High Voltage",
     "description": "Reactive power compensation banks for substations at 10 kV to 220 kV. Dual-rated for power factor correction and harmonic filter tuning. GB/T and IEC compliant.",
+    "overview": "The HV Series shunt capacitor banks provide reactive power compensation at transmission and distribution voltage levels. Banks are available in fixed or switchable configurations and can be tuned with series reactors for harmonic filter duty. All units are manufactured and tested to GB/T and IEC standards.",
+    "applications": ["Reactive power compensation", "Power factor correction", "Voltage support at substations", "Harmonic filter banks"],
     "image": "images/product-hv-shunt.jpg",
-    "link": "contact.html"
+    "specs": [
+      { "label": "Rated Voltage",         "value": "10 kV / 35 kV / 110 kV / 220 kV" },
+      { "label": "Capacitance",           "value": "TBD" },
+      { "label": "Reactive Power Rating", "value": "TBD" },
+      { "label": "Loss Factor (tan δ)",   "value": "TBD" },
+      { "label": "Frequency",             "value": "50 Hz" },
+      { "label": "Insulation Level",      "value": "TBD" },
+      { "label": "Configuration",         "value": "Fixed / Switchable" },
+      { "label": "Standards",             "value": "GB/T 11024, IEC 60871" }
+    ]
   },
   {
+    "id": "hv-filter",
     "name": "Harmonic Filter Capacitor — HF Series",
     "category": "High Voltage",
     "description": "Tuned filter capacitors for substations with harmonic distortion from non-linear loads. Configured into C-type or single-tuned filter banks with series reactors.",
+    "overview": "The HF Series harmonic filter capacitors are used in substation filter banks to suppress harmonic distortion generated by non-linear loads such as converters and variable-speed drives. Available for single-tuned and C-type filter configurations. Designed for continuous duty under combined fundamental and harmonic voltage stress.",
+    "applications": ["Single-tuned harmonic filters", "C-type filter banks", "Power quality improvement", "Grid equipment protection"],
     "image": "images/product-hv-filter.jpg",
-    "link": "contact.html"
+    "specs": [
+      { "label": "Rated Voltage",         "value": "TBD" },
+      { "label": "Capacitance",           "value": "TBD" },
+      { "label": "Filter Type",           "value": "Single-tuned / C-type" },
+      { "label": "Tuning Order",          "value": "TBD" },
+      { "label": "Loss Factor (tan δ)",   "value": "TBD" },
+      { "label": "Harmonic Voltage Factor", "value": "TBD" },
+      { "label": "Frequency",             "value": "50 Hz" },
+      { "label": "Standards",             "value": "GB/T 11024, IEC 60871" }
+    ]
   }
 ]

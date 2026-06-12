@@ -256,26 +256,6 @@ function renderProducts(d) {
     <h1>${d.page_hero.title}</h1>
     <p>${d.page_hero.subtitle}</p>`);
 
-  // Category overview cards
-  if (d.categories?.length) {
-    set('category-overview', `
-      <div class="category-grid">
-        ${d.categories.map(c => `
-          <a href="#${c.id}" class="category-card fade-up">
-            <div class="category-card-icon">${icon(c.icon)}</div>
-            <div class="category-card-sub">${c.subtitle}</div>
-            <h3>${c.name}</h3>
-            <p>${c.description}</p>
-            <div class="category-card-tags">
-              ${c.applications.map(a => `<span class="category-tag">${a}</span>`).join('')}
-            </div>
-            <div class="category-card-cta">
-              View products ${icon('chevron')}
-            </div>
-          </a>`).join('')}
-      </div>`);
-  }
-
   const c = d.custom;
   set('custom', `
     <div class="split fade-up">
@@ -337,15 +317,16 @@ async function loadProducts() {
   } catch { console.warn('Could not load products.json'); }
 }
 
-/* ── Products by category (products page) ────────────────── */
+/* ── Products by category (products page sidebar) ────────── */
 async function loadProductSections(pageData) {
-  const container = document.getElementById('product-sections');
-  if (!container) return;
+  const sidebar = document.getElementById('products-sidebar');
+  const main    = document.getElementById('products-main');
+  if (!sidebar || !main) return;
+
   try {
-    const products = await fetch('content/products.json').then(r => r.json());
+    const products   = await fetch('content/products.json').then(r => r.json());
     const categories = pageData?.categories || [];
 
-    // Group products by category
     const grouped = {};
     products.forEach(p => {
       const key = p.category || 'Other';
@@ -353,36 +334,79 @@ async function loadProductSections(pageData) {
       grouped[key].push(p);
     });
 
-    // Render one section per category, in declared order
-    const order = categories.length
-      ? categories.map(c => c.name)
-      : Object.keys(grouped);
+    const order = categories.length ? categories.map(c => c.name) : Object.keys(grouped);
 
-    container.innerHTML = order.map((catName, i) => {
+    // Build sidebar
+    sidebar.innerHTML = `<span class="products-sidebar-label">Product Lines</span>` +
+      order.map((catName, i) => {
+        const meta = categories.find(c => c.name === catName) || {};
+        return `
+          <button class="products-sidebar-btn${i === 0 ? ' active' : ''}"
+                  data-cat="${catName}" type="button">
+            <div class="products-sidebar-btn-icon">${icon(meta.icon || 'grid')}</div>
+            <div class="products-sidebar-btn-text">
+              <strong>${catName}</strong>
+              <span>${meta.subtitle || ''}</span>
+            </div>
+          </button>`;
+      }).join('');
+
+    // Build panels
+    main.innerHTML = order.map((catName, i) => {
       const items = grouped[catName] || [];
-      const meta = categories.find(c => c.name === catName) || {};
+      const meta  = categories.find(c => c.name === catName) || {};
       return `
-        <div class="category-section" id="${meta.id || catName.toLowerCase().replace(/\s+/g,'-')}">
-          <div class="container">
-            <div class="category-section-header fade-up">
-              <div class="category-section-icon">${icon(meta.icon || 'grid')}</div>
-              <div>
-                <h2>${catName}</h2>
-                <p>${meta.description || ''}</p>
-              </div>
-            </div>
-            <div class="products-grid">
-              ${items.map(p => productCardHTML(p)).join('')}
-            </div>
+        <div class="products-panel${i === 0 ? ' active' : ''}" data-cat="${catName}" id="${meta.id || ''}">
+          <div class="products-panel-header">
+            <h2>${catName}</h2>
+            <p>${meta.description || ''}</p>
+          </div>
+          <div class="product-list">
+            ${items.map(p => productListItemHTML(p)).join('')}
           </div>
         </div>`;
     }).join('');
 
-    container.querySelectorAll('.fade-up, .product-card').forEach(el => fadeObserver.observe(el));
+    // Switch panels on sidebar click
+    sidebar.addEventListener('click', e => {
+      const btn = e.target.closest('.products-sidebar-btn');
+      if (!btn) return;
+      const cat = btn.dataset.cat;
+      sidebar.querySelectorAll('.products-sidebar-btn').forEach(b => b.classList.toggle('active', b === btn));
+      main.querySelectorAll('.products-panel').forEach(p => p.classList.toggle('active', p.dataset.cat === cat));
+    });
+
+    // Activate via URL hash (from nav dropdown links)
+    const hash = location.hash.slice(1);
+    if (hash) {
+      const panel = main.querySelector(`.products-panel[id="${hash}"]`);
+      if (panel) {
+        const cat = panel.dataset.cat;
+        sidebar.querySelectorAll('.products-sidebar-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+        main.querySelectorAll('.products-panel').forEach(p => p.classList.toggle('active', p === panel));
+      }
+    }
+
   } catch { console.warn('Could not load products.json'); }
 }
 
+function productListItemHTML(p) {
+  const url = p.id ? `product.html?id=${p.id}` : (p.link || '#');
+  const thumb = p.image
+    ? `<img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">`
+    : '';
+  return `
+    <a href="${url}" class="product-list-item">
+      <div class="product-list-thumb">${thumb}</div>
+      <div>
+        <div class="product-list-name">${p.name}</div>
+        <div class="product-list-desc">${p.description}</div>
+      </div>
+    </a>`;
+}
+
 function productCardHTML(p) {
+  const detailUrl = p.id ? `product.html?id=${p.id}` : (p.link || '#');
   return `
     <div class="product-card fade-up">
       <div class="product-card-img">
@@ -395,9 +419,51 @@ function productCardHTML(p) {
         <div class="product-card-tag">${p.category || 'Product'}</div>
         <h3>${p.name}</h3>
         <p>${p.description}</p>
-        ${p.link ? `<a href="${p.link}" class="btn btn-primary">Learn More</a>` : ''}
+        <a href="${detailUrl}" class="btn btn-primary">Learn More</a>
       </div>
     </div>`;
+}
+
+/* ── Product detail page ─────────────────────────────────── */
+async function renderProductDetail() {
+  const id = new URLSearchParams(location.search).get('id');
+  if (!id) { location.href = 'products.html'; return; }
+
+  try {
+    const products = await fetch('content/products.json').then(r => r.json());
+    const p = products.find(x => x.id === id);
+    if (!p) { location.href = 'products.html'; return; }
+
+    document.title = `${p.name} — On Capacitor`;
+
+    set('page-hero', `
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>${icon('chevron')}
+        <a href="products.html#${id.split('-').slice(0,1)[0] === 'hv' ? 'high-voltage' : id.startsWith('pulse') ? 'pulse-capacitors' : 'induction-heating'}">Products</a>${icon('chevron')}
+        <span>${p.category}</span>
+      </nav>
+      <h1>${p.name}</h1>`);
+
+    set('product-image', imgOrPlaceholder(p.image, p.name, 'image'));
+
+    set('product-meta', `
+      <div class="tag">${p.category}</div>
+      <h1>${p.name}</h1>
+      <p>${p.overview || p.description}</p>`);
+
+    if (p.applications?.length) {
+      set('product-applications', `
+        <h3>Applications</h3>
+        <ul>${p.applications.map(a => `<li>${a}</li>`).join('')}</ul>`);
+    }
+
+    set('specs-body', (p.specs || []).map(s => `
+      <tr>
+        <td>${s.label}</td>
+        <td class="${s.value === 'TBD' ? 'spec-tbd' : ''}">${s.value === 'TBD' ? 'To be confirmed' : s.value}</td>
+      </tr>`).join(''));
+
+  } catch { location.href = 'products.html'; }
 }
 
 /* ── Markdown loader ─────────────────────────────────────── */
@@ -580,6 +646,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (page === 'about')    renderAbout(pageData);
   if (page === 'products') renderProducts(pageData);
   if (page === 'contact')  renderContact(pageData);
+  if (page === 'product')  await renderProductDetail();
 
   await Promise.all([loadProducts(), loadProductSections(pageData), loadMarkdown()]);
 

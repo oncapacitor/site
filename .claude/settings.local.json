@@ -12,7 +12,9 @@
       "Bash(git fetch *)",
       "Bash(git checkout *)",
       "Bash(git reset *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.nwl.com)"
     ]
   }
 }
