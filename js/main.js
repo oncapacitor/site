@@ -205,9 +205,6 @@ function renderHome(d) {
 
 function renderAbout(d) {
   set('page-hero', `
-    <nav class="breadcrumb">
-      <a href="index.html">Home</a>${icon('chevron')}<span>About Us</span>
-    </nav>
     <h1>${d.page_hero.title}</h1>
     <p>${d.page_hero.subtitle}</p>`);
 
@@ -250,9 +247,6 @@ function renderAbout(d) {
 
 function renderProducts(d) {
   set('page-hero', `
-    <nav class="breadcrumb">
-      <a href="index.html">Home</a>${icon('chevron')}<span>Products</span>
-    </nav>
     <h1>${d.page_hero.title}</h1>
     <p>${d.page_hero.subtitle}</p>`);
 
@@ -275,9 +269,6 @@ function renderProducts(d) {
 
 function renderContact(d) {
   set('page-hero', `
-    <nav class="breadcrumb">
-      <a href="index.html">Home</a>${icon('chevron')}<span>Contact Us</span>
-    </nav>
     <h1>${d.page_hero.title}</h1>
     <p>${d.page_hero.subtitle}</p>`);
 
@@ -436,13 +427,7 @@ async function renderProductDetail() {
 
     document.title = `${p.name} — On Capacitor`;
 
-    set('page-hero', `
-      <nav class="breadcrumb">
-        <a href="index.html">Home</a>${icon('chevron')}
-        <a href="products.html#${id.split('-').slice(0,1)[0] === 'hv' ? 'high-voltage' : id.startsWith('pulse') ? 'pulse-capacitors' : 'induction-heating'}">Products</a>${icon('chevron')}
-        <span>${p.category}</span>
-      </nav>
-      <h1>${p.name}</h1>`);
+    set('page-hero', `<h1>${p.name}</h1>`);
 
     set('product-image', imgOrPlaceholder(p.image, p.name, 'image'));
 
