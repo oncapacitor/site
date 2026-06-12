@@ -4,26 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products — On Capacitor</title>
-  <meta name="description" content="Browse On Capacitor's full range of high-performance capacitor solutions for every application.">
+  <meta name="description" content="Browse On Capacitor's three product lines: induction heating capacitors, pulse capacitors, and high voltage capacitors.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .filter-btn {
-      padding: 8px 18px;
-      border-radius: 999px;
-      border: 1.5px solid var(--gray-300);
-      background: var(--white);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: var(--font);
-    }
-    .filter-btn:hover  { border-color: var(--blue); color: var(--blue); }
-    .filter-btn.active { background: var(--blue); border-color: var(--blue); color: var(--white); }
-  </style>
 </head>
 <body>
 
@@ -34,20 +18,13 @@
   <div class="container" id="page-hero"></div>
 </section>
 
-<div class="section--alt" style="padding:24px 0;">
-  <div class="container">
-    <div id="filter-bar" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;"></div>
-  </div>
-</div>
-
-<section class="section">
-  <div class="container">
-    <div class="products-grid" id="products-grid"></div>
-    <div id="products-empty" style="display:none;text-align:center;padding:80px 0;color:var(--text-muted);">
-      No products found in this category.
-    </div>
-  </div>
+<!-- Three category overview cards -->
+<section class="section section--alt" style="padding:64px 0;">
+  <div class="container" id="category-overview"></div>
 </section>
+
+<!-- One section per product category, rendered from products.json -->
+<div id="product-sections"></div>
 
 <section class="section section--dark">
   <div class="container" id="custom"></div>

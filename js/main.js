@@ -89,25 +89,49 @@ function imgOrPlaceholder(src, alt, iconName = 'image') {
 }
 
 /* ── Nav & Footer (shared) ───────────────────────────────── */
-function renderNav(site, page) {
-  const links = site.nav.map(l =>
-    `<a href="${l.href}" ${page === l.href ? 'class="active"' : ''}>${l.label}</a>`
-  ).join('');
+function renderNav(site, page, categories = []) {
+  const dropdownItems = categories.map(c => `
+    <a href="products.html#${c.id}" class="nav-dropdown-item">
+      <div class="nav-dropdown-icon">${icon(c.icon)}</div>
+      <div class="nav-dropdown-text">
+        <strong>${c.name}</strong>
+        <span>${c.subtitle}</span>
+      </div>
+    </a>`).join('');
+
+  const links = site.nav.map(l => {
+    if (l.href === 'products.html' && categories.length) {
+      return `
+        <div class="nav-dropdown">
+          <a href="${l.href}" ${page === l.href ? 'class="active"' : ''}>${l.label}</a>
+          <div class="nav-dropdown-menu">${dropdownItems}</div>
+        </div>`;
+    }
+    return `<a href="${l.href}" ${page === l.href ? 'class="active"' : ''}>${l.label}</a>`;
+  }).join('');
+
   const mobileLinks = site.nav.map(l => `<a href="${l.href}">${l.label}</a>`).join('');
+  const mobileCats = categories.map(c =>
+    `<a href="products.html#${c.id}" style="padding-left:32px;font-size:.875rem;opacity:.8;">${c.name}</a>`
+  ).join('');
 
   set('nav', `
     <div class="nav-inner">
       ${logoLink('index.html', site.company)}
-      <div class="nav-links">
-        ${links}
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      <div class="nav-links">${links}</div>
+      <div class="nav-end">
+        <a href="contact.html" class="btn btn-primary nav-cta">Contact Us</a>
+        <button class="nav-hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <button class="nav-hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>`);
 
-  set('nav-mobile', mobileLinks + `<a href="contact.html">Contact Us</a>`);
+  set('nav-mobile',
+    mobileLinks +
+    (categories.length ? mobileCats : '') +
+    `<a href="contact.html">Contact Us</a>`
+  );
 }
 
 function renderFooter(site) {
@@ -232,6 +256,26 @@ function renderProducts(d) {
     <h1>${d.page_hero.title}</h1>
     <p>${d.page_hero.subtitle}</p>`);
 
+  // Category overview cards
+  if (d.categories?.length) {
+    set('category-overview', `
+      <div class="category-grid">
+        ${d.categories.map(c => `
+          <a href="#${c.id}" class="category-card fade-up">
+            <div class="category-card-icon">${icon(c.icon)}</div>
+            <div class="category-card-sub">${c.subtitle}</div>
+            <h3>${c.name}</h3>
+            <p>${c.description}</p>
+            <div class="category-card-tags">
+              ${c.applications.map(a => `<span class="category-tag">${a}</span>`).join('')}
+            </div>
+            <div class="category-card-cta">
+              View products ${icon('chevron')}
+            </div>
+          </a>`).join('')}
+      </div>`);
+  }
+
   const c = d.custom;
   set('custom', `
     <div class="split fade-up">
@@ -282,29 +326,78 @@ function renderContact(d) {
   }
 }
 
-/* ── Products grid (shared by home + products page) ─────── */
+/* ── Products (flat grid — homepage preview) ─────────────── */
 async function loadProducts() {
   const grid = document.getElementById('products-grid');
   if (!grid) return;
   try {
     const products = await fetch('content/products.json').then(r => r.json());
-    grid.innerHTML = products.map(p => `
-      <div class="product-card fade-up">
-        <div class="product-card-img">
-          ${p.image
-            ? `<img src="${p.image}" alt="${p.name}" loading="lazy"
-                onerror="this.parentElement.innerHTML='<div class=\\'placeholder-img\\'>${icon('image').replace(/`/g,'')}</div>'">`
-            : `<div class="placeholder-img">${icon('image')}</div>`}
-        </div>
-        <div class="product-card-body">
-          <div class="product-card-tag">${p.category || 'Product'}</div>
-          <h3>${p.name}</h3>
-          <p>${p.description}</p>
-          ${p.link ? `<a href="${p.link}" class="btn btn-primary">Learn More</a>` : ''}
-        </div>
-      </div>`).join('');
+    grid.innerHTML = products.map(p => productCardHTML(p)).join('');
     grid.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
   } catch { console.warn('Could not load products.json'); }
+}
+
+/* ── Products by category (products page) ────────────────── */
+async function loadProductSections(pageData) {
+  const container = document.getElementById('product-sections');
+  if (!container) return;
+  try {
+    const products = await fetch('content/products.json').then(r => r.json());
+    const categories = pageData?.categories || [];
+
+    // Group products by category
+    const grouped = {};
+    products.forEach(p => {
+      const key = p.category || 'Other';
+      if (!grouped[key]) grouped[key] = [];
+      grouped[key].push(p);
+    });
+
+    // Render one section per category, in declared order
+    const order = categories.length
+      ? categories.map(c => c.name)
+      : Object.keys(grouped);
+
+    container.innerHTML = order.map((catName, i) => {
+      const items = grouped[catName] || [];
+      const meta = categories.find(c => c.name === catName) || {};
+      return `
+        <div class="category-section" id="${meta.id || catName.toLowerCase().replace(/\s+/g,'-')}">
+          <div class="container">
+            <div class="category-section-header fade-up">
+              <div class="category-section-icon">${icon(meta.icon || 'grid')}</div>
+              <div>
+                <h2>${catName}</h2>
+                <p>${meta.description || ''}</p>
+              </div>
+            </div>
+            <div class="products-grid">
+              ${items.map(p => productCardHTML(p)).join('')}
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+
+    container.querySelectorAll('.fade-up, .product-card').forEach(el => fadeObserver.observe(el));
+  } catch { console.warn('Could not load products.json'); }
+}
+
+function productCardHTML(p) {
+  return `
+    <div class="product-card fade-up">
+      <div class="product-card-img">
+        ${p.image
+          ? `<img src="${p.image}" alt="${p.name}" loading="lazy"
+              onerror="this.parentElement.innerHTML='<div class=\\'placeholder-img\\'>${icon('image')}</div>'">`
+          : `<div class="placeholder-img">${icon('image')}</div>`}
+      </div>
+      <div class="product-card-body">
+        <div class="product-card-tag">${p.category || 'Product'}</div>
+        <h3>${p.name}</h3>
+        <p>${p.description}</p>
+        ${p.link ? `<a href="${p.link}" class="btn btn-primary">Learn More</a>` : ''}
+      </div>
+    </div>`;
 }
 
 /* ── Markdown loader ─────────────────────────────────────── */
@@ -385,6 +478,7 @@ function initNav() {
   window.addEventListener('scroll', () =>
     navEl?.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
 
+  // Hamburger toggle
   document.addEventListener('click', e => {
     const hamburger = e.target.closest('.nav-hamburger');
     const mobileMenu = document.getElementById('nav-mobile');
@@ -395,6 +489,19 @@ function initNav() {
       document.querySelector('.nav-hamburger')?.classList.remove('open');
       mobileMenu?.classList.remove('open');
     }
+  });
+
+  // Dropdown: open on hover, close with delay so mouse can travel to menu
+  document.querySelectorAll('.nav-dropdown').forEach(wrapper => {
+    const menu = wrapper.querySelector('.nav-dropdown-menu');
+    if (!menu) return;
+    let timer;
+    const open  = () => { clearTimeout(timer); menu.classList.add('open'); };
+    const close = () => { timer = setTimeout(() => menu.classList.remove('open'), 200); };
+    wrapper.addEventListener('mouseenter', open);
+    wrapper.addEventListener('mouseleave', close);
+    menu.addEventListener('mouseenter', open);
+    menu.addEventListener('mouseleave', close);
   });
 }
 
@@ -459,12 +566,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const pageFile = { index: 'home', about: 'about', products: 'products-page', contact: 'contact' }[page] || page;
 
-  const [site, pageData] = await Promise.all([
+  const [site, pageData, productsPage] = await Promise.all([
     fetch('content/site.json').then(r => r.json()).catch(() => ({})),
-    fetch(`content/${pageFile}.json`).then(r => r.json()).catch(() => ({}))
+    fetch(`content/${pageFile}.json`).then(r => r.json()).catch(() => ({})),
+    fetch('content/products-page.json').then(r => r.json()).catch(() => ({}))
   ]);
 
-  renderNav(site, location.pathname.split('/').pop() || 'index.html');
+  const categories = productsPage?.categories || [];
+  renderNav(site, location.pathname.split('/').pop() || 'index.html', categories);
   renderFooter(site);
 
   if (page === 'index')    renderHome(pageData);
@@ -472,7 +581,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (page === 'products') renderProducts(pageData);
   if (page === 'contact')  renderContact(pageData);
 
-  await Promise.all([loadProducts(), loadMarkdown()]);
+  await Promise.all([loadProducts(), loadProductSections(pageData), loadMarkdown()]);
 
   initNav();
   initContactForm();

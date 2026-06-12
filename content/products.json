@@ -2,42 +2,42 @@
   {
     "name": "Resonant Tank Capacitor — IH Series",
     "category": "Induction Heating",
-    "description": "Water-cooled resonant capacitors designed for induction heating systems operating at 1 kHz to 400 kHz. Optimised for low ESR and high ripple current handling in hardening, brazing, annealing, and forging applications.",
+    "description": "Water-cooled resonant capacitors for induction heating systems from 1 kHz to 400 kHz. Low ESR, high ripple current, suited for hardening, brazing, and forging.",
     "image": "images/product-ih-resonant.jpg",
     "link": "contact.html"
   },
   {
     "name": "Induction Melting Capacitor Bank — IM Series",
     "category": "Induction Heating",
-    "description": "Heavy-duty capacitor banks for coreless and channel induction furnaces melting steel, iron, copper, aluminium, and precious metals. Engineered for continuous operation under high reactive power loads with capacities from sub-tonne to 100-tonne furnaces.",
+    "description": "Capacitor banks for coreless and channel induction furnaces. Continuous operation under high reactive power loads, from sub-tonne to 100-tonne furnace capacities.",
     "image": "images/product-ih-melting.jpg",
     "link": "contact.html"
   },
   {
     "name": "High Energy Pulse Capacitor — PF Series",
     "category": "Pulse Capacitors",
-    "description": "Low-inductance, fast-discharge capacitors for pulsed power systems including inertial confinement fusion drivers and Z-pinch devices. Rated up to 100 kJ per unit with sub-microsecond discharge capability and high charge-discharge cycle life.",
+    "description": "Low-inductance, fast-discharge capacitors for fusion drivers and Z-pinch devices. Up to 100 kJ per unit, sub-microsecond discharge, high cycle life.",
     "image": "images/product-pulse-pf.jpg",
     "link": "contact.html"
   },
   {
     "name": "Modular Pulse Capacitor Bank — PB Series",
     "category": "Pulse Capacitors",
-    "description": "Scalable bank assemblies for large-scale pulsed power installations delivering terawatt-class instantaneous power. Designed for integration into fusion energy research facilities, railgun systems, and high-power microwave sources.",
+    "description": "Scalable assemblies for large-scale pulsed power installations. Designed for fusion energy research facilities and high-power applications requiring terawatt-class instantaneous output.",
     "image": "images/product-pulse-bank.jpg",
     "link": "contact.html"
   },
   {
     "name": "Shunt Capacitor Bank — HV Series",
     "category": "High Voltage",
-    "description": "Reactive power compensation capacitor banks for AC transmission and distribution substations. Available for 10 kV, 35 kV, 110 kV, and 220 kV systems. Dual-rated for power factor correction and harmonic filter tuning, compliant with GB/T and IEC standards.",
+    "description": "Reactive power compensation banks for substations at 10 kV to 220 kV. Dual-rated for power factor correction and harmonic filter tuning. GB/T and IEC compliant.",
     "image": "images/product-hv-shunt.jpg",
     "link": "contact.html"
   },
   {
     "name": "Harmonic Filter Capacitor — HF Series",
     "category": "High Voltage",
-    "description": "Tuned harmonic filter capacitors for substation installations where non-linear loads generate harmonic distortion. Configured with series reactors into C-type or single-tuned filter banks, protecting grid equipment and improving power quality.",
+    "description": "Tuned filter capacitors for substations with harmonic distortion from non-linear loads. Configured into C-type or single-tuned filter banks with series reactors.",
     "image": "images/product-hv-filter.jpg",
     "link": "contact.html"
   }

@@ -1,8 +1,34 @@
 {
   "page_hero": {
     "title":    "Our Products",
-    "subtitle": "Three specialist product lines — induction heating, pulse power, and high-voltage — each engineered to the exacting demands of its application."
+    "subtitle": "Three specialist product lines — each engineered to the exacting demands of its application."
   },
+  "categories": [
+    {
+      "id":          "induction-heating",
+      "name":        "Induction Heating",
+      "icon":        "zap",
+      "subtitle":    "Capacitors for Induction Furnaces",
+      "description": "Resonant tank capacitors and banks for induction heating and melting systems. Built for continuous high-frequency operation in metal foundries.",
+      "applications": ["Induction Heating", "Induction Melting"]
+    },
+    {
+      "id":          "pulse-capacitors",
+      "name":        "Pulse Capacitors",
+      "icon":        "shield",
+      "subtitle":    "Pulsed Power for Fusion Energy",
+      "description": "High-energy, fast-discharge capacitors for nuclear fusion research and pulsed power systems. Sub-microsecond discharge with high cycle repeatability.",
+      "applications": ["Nuclear Fusion Research", "Pulsed Power Systems"]
+    },
+    {
+      "id":          "high-voltage",
+      "name":        "High Voltage",
+      "icon":        "grid",
+      "subtitle":    "Capacitors for Power Substations",
+      "description": "Shunt capacitor banks and harmonic filter capacitors for AC substations. 10 kV to 220 kV, GB/T and IEC compliant.",
+      "applications": ["Reactive Power Compensation", "Harmonic Filtering"]
+    }
+  ],
   "custom": {
     "tag":   "Custom Engineering",
     "title": "Specifications that don't fit our catalogue?",
