@@ -23,13 +23,7 @@ const ICONS = {
   building:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
 };
 
-const LOGO_SVG = `
-  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="32" height="32" rx="8" fill="#0e7afe"/>
-    <rect x="9" y="8" width="3" height="16" rx="1.5" fill="white"/>
-    <rect x="20" y="8" width="3" height="16" rx="1.5" fill="white"/>
-    <path d="M12 16 H20" stroke="#f0a500" stroke-width="2.5" stroke-linecap="round"/>
-  </svg>`;
+const LOGO_SVG = `<svg viewBox="0 0 52 30" xmlns="http://www.w3.org/2000/svg"><rect width="52" height="30" fill="#cc1414"/><text x="26" y="21" text-anchor="middle" fill="white" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="16" letter-spacing="3">ON</text></svg>`;
 
 /* ── Helpers ─────────────────────────────────────────────── */
 function set(id, html) {
@@ -43,7 +37,21 @@ function btn(b) {
   return `<a href="${b.href}" class="btn ${b.style || 'btn-primary'}">${b.label}</a>`;
 }
 
-function featureCard(item) {
+function featureCard(item, useCategoryStyle = false) {
+  if (useCategoryStyle) {
+    const thumb = item.image
+      ? `<img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.style.display='none'">`
+      : '';
+    return `
+      <div class="feature-card fade-up">
+        <div class="feature-card-img">${thumb}</div>
+        <div class="feature-card-label">${item.subtitle || ''}</div>
+        <h3>${item.title}</h3>
+        <div class="feature-card-underline"></div>
+        <p>${item.body}</p>
+        ${item.href ? `<a href="${item.href}" class="feature-card-link">View Products ${icon('chevron')}</a>` : ''}
+      </div>`;
+  }
   return `
     <div class="feature-card fade-up">
       <div class="feature-icon">${icon(item.icon)}</div>
@@ -84,8 +92,9 @@ function placeholderImg(iconName = 'image') {
 
 function imgOrPlaceholder(src, alt, iconName = 'image') {
   if (!src) return placeholderImg(iconName);
+  const ph = placeholderImg(iconName).replace(/'/g, '&apos;').replace(/"/g, '&quot;');
   return `<img src="${src}" alt="${alt || ''}" loading="lazy"
-    onerror="this.parentElement.innerHTML='${placeholderImg(iconName).replace(/'/g, '&apos;')}'">`;
+    onerror="this.parentElement.innerHTML='${ph}'">`;
 }
 
 /* ── Nav & Footer (shared) ───────────────────────────────── */
@@ -180,8 +189,7 @@ function renderHome(d) {
 
   const f = d.features;
   set('features', `
-    ${sectionHeader(f)}
-    <div class="features-grid">${f.items.map(featureCard).join('')}</div>`);
+    <div class="features-grid">${f.items.map(i => featureCard(i, true)).join('')}</div>`);
 
   const a = d.about_teaser;
   set('about-teaser', `
@@ -402,8 +410,7 @@ function productCardHTML(p) {
     <div class="product-card fade-up">
       <div class="product-card-img">
         ${p.image
-          ? `<img src="${p.image}" alt="${p.name}" loading="lazy"
-              onerror="this.parentElement.innerHTML='<div class=\\'placeholder-img\\'>${icon('image')}</div>'">`
+          ? `<img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">`
           : `<div class="placeholder-img">${icon('image')}</div>`}
       </div>
       <div class="product-card-body">

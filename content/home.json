@@ -1,38 +1,47 @@
 {
   "hero": {
-    "eyebrow": "Precision Energy Storage",
-    "title": "Power Solutions Built for <span class='highlight'>Tomorrow's Demands</span>",
-    "subtitle": "On Capacitor engineers high-performance capacitor systems for industrial, commercial, and R&D applications — delivering reliability where it matters most.",
+    "eyebrow": "Powering Industry. Enabling Efficiency.",
+    "title": "Industrial Capacitors for <span class='highlight'>High-Frequency</span> Power Systems",
+    "subtitle": "Engineered for induction heating, melting, furnaces and power factor correction — built for continuous heavy-duty operation.",
     "cta": [
-      { "label": "Explore Products", "href": "products.html", "style": "btn-gold" },
-      { "label": "Get in Touch",     "href": "contact.html",  "style": "btn-outline" }
+      { "label": "Explore Products", "href": "products.html", "style": "btn-primary" },
+      { "label": "Request a Quote",  "href": "contact.html",  "style": "btn-outline" }
     ]
   },
   "stats": [
-    { "value": 15,  "suffix": "+", "label": "Years of Experience" },
-    { "value": 500, "suffix": "+", "label": "Products Shipped" },
-    { "value": 98,  "suffix": "%", "label": "Customer Satisfaction" },
-    { "value": 40,  "suffix": "+", "label": "Countries Served" }
+    { "value": 20,  "suffix": "+", "label": "Years of Experience" },
+    { "value": 50,  "suffix": "+", "label": "Countries Served" },
+    { "value": 100, "suffix": "K+","label": "Units Produced" },
+    { "value": 100, "suffix": "%", "label": "Tested Before Delivery" }
   ],
   "features": {
-    "tag":   "Three Specialist Product Lines",
-    "title": "Built for the World's Most Demanding Applications.",
-    "lead":  "From induction furnaces to fusion energy research to national grid infrastructure — we engineer capacitors where performance and reliability are non-negotiable.",
+    "tag":   "Product Lines",
+    "title": "Built for the World's Most Demanding Applications",
+    "lead":  "",
     "items": [
       {
-        "icon":  "zap",
-        "title": "Induction Heating",
-        "body":  "Resonant tank capacitors and capacitor banks for induction heating and induction melting systems. Engineered for continuous high-frequency, high-reactive-power operation in steel, aluminium, and precious metal foundries."
+        "icon":     "zap",
+        "subtitle": "Induction Furnace Capacitors",
+        "title":    "Induction Heating",
+        "body":     "Designed for series and parallel resonance circuits in medium and high-frequency induction heating and melting systems.",
+        "image":    "images/cat-induction.jpg",
+        "href":     "products.html#induction-heating"
       },
       {
-        "icon":  "shield",
-        "title": "Pulse Power",
-        "body":  "High-energy, fast-discharge pulse capacitors for nuclear fusion research and other pulsed power applications. Designed to store and release enormous energy in sub-microsecond pulses, cycle after cycle."
+        "icon":     "shield",
+        "subtitle": "Pulsed Power for Fusion Energy",
+        "title":    "Pulse Capacitors",
+        "body":     "High-energy, fast-discharge pulse capacitors for nuclear fusion research and pulsed power systems. Sub-microsecond discharge.",
+        "image":    "images/cat-pulse.jpg",
+        "href":     "products.html#pulse-capacitors"
       },
       {
-        "icon":  "settings",
-        "title": "High Voltage",
-        "body":  "Shunt capacitor banks and harmonic filter capacitors for AC transmission and distribution substations. Available from 10 kV to 220 kV, compliant with GB/T and IEC standards."
+        "icon":     "grid",
+        "subtitle": "Capacitors for Power Substations",
+        "title":    "High Voltage",
+        "body":     "Power factor correction and filtration solutions for power systems up to 35 kV class. GB/T and IEC compliant.",
+        "image":    "images/cat-hv.jpg",
+        "href":     "products.html#high-voltage"
       }
     ]
   },
@@ -50,14 +59,14 @@
     "tag":   "Our Products",
     "title": "Induction Heating. Pulse Power. High Voltage.",
     "lead":  "Three focused product lines, each engineered to the specific demands of its application — from metal foundries and fusion research to national grid substations.",
-    "cta":   { "label": "View All Products", "href": "products.html", "style": "btn-gold" }
+    "cta":   { "label": "View All Products", "href": "products.html", "style": "btn-primary" }
   },
   "cta": {
-    "title": "Ready to power your next project?",
+    "title": "Ready to Power Your Next Project?",
     "body":  "Talk to our engineering team and find the right capacitor solution for your application.",
     "actions": [
-      { "label": "Request a Quote",  "href": "contact.html",  "style": "btn-gold" },
-      { "label": "Browse Products",  "href": "products.html", "style": "btn-outline" }
+      { "label": "Request a Quote", "href": "contact.html",  "style": "btn-primary" },
+      { "label": "Browse Products", "href": "products.html", "style": "btn-outline" }
     ]
   }
 }
