@@ -21,9 +21,78 @@ const ICONS = {
   chevron:     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>`,
   image:       `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`,
   building:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+  flame:       `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>`,
+  package:     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>`,
+  'file-text': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14 2v6h6M16 13H8m8 4H8m2-8H8"/></svg>`,
+  thermometer: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 14.76V3.5a2.5 2.5 0 00-5 0v11.26a4.5 4.5 0 105 0z"/></svg>`,
+  tool:        `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>`,
+  award:       `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>`,
 };
 
 const LOGO_SVG = `<svg viewBox="0 0 52 30" xmlns="http://www.w3.org/2000/svg"><rect width="52" height="30" fill="#cc1414"/><text x="26" y="21" text-anchor="middle" fill="white" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="16" letter-spacing="3">ON</text></svg>`;
+
+const HERO_SVG = `<svg viewBox="0 0 440 340" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Industrial capacitor bank illustration" role="img">
+  <defs>
+    <pattern id="hg" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="440" height="340" fill="url(#hg)"/>
+  <!-- Rack frame -->
+  <rect x="50" y="30" width="300" height="240" rx="3" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" fill="rgba(0,0,0,0.25)"/>
+  <!-- Top bus bar -->
+  <rect x="70" y="44" width="260" height="11" fill="rgba(255,255,255,0.08)" rx="2" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- Bottom bus bar -->
+  <rect x="70" y="245" width="260" height="11" fill="rgba(255,255,255,0.08)" rx="2" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <!-- Capacitor 1 -->
+  <rect x="78" y="65" width="76" height="172" rx="3" fill="#111" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
+  <rect x="88" y="75" width="56" height="122" rx="2" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="98" y1="124" x2="134" y2="124" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
+  <line x1="98" y1="130" x2="134" y2="130" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
+  <circle cx="116" cy="65" r="5.5" fill="#111" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <circle cx="116" cy="237" r="5.5" fill="#111" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <text x="116" y="145" text-anchor="middle" font-family="monospace" font-size="7.5" fill="rgba(255,255,255,0.22)" transform="rotate(-90,116,145)">IH-1500</text>
+  <!-- Capacitor 2 — highlighted (red) -->
+  <rect x="182" y="65" width="76" height="172" rx="3" fill="rgba(204,20,20,0.07)" stroke="rgba(204,20,20,0.42)" stroke-width="1.5"/>
+  <rect x="192" y="75" width="56" height="122" rx="2" fill="rgba(204,20,20,0.03)" stroke="rgba(204,20,20,0.14)" stroke-width="1"/>
+  <line x1="202" y1="124" x2="238" y2="124" stroke="rgba(204,20,20,0.38)" stroke-width="1.5"/>
+  <line x1="202" y1="130" x2="238" y2="130" stroke="rgba(204,20,20,0.38)" stroke-width="1.5"/>
+  <circle cx="220" cy="65" r="5.5" fill="rgba(204,20,20,0.25)" stroke="rgba(204,20,20,0.75)" stroke-width="1.5"/>
+  <circle cx="220" cy="237" r="5.5" fill="rgba(204,20,20,0.25)" stroke="rgba(204,20,20,0.75)" stroke-width="1.5"/>
+  <text x="220" y="145" text-anchor="middle" font-family="monospace" font-size="7.5" fill="rgba(204,20,20,0.5)" transform="rotate(-90,220,145)">IH-1500</text>
+  <!-- Capacitor 3 -->
+  <rect x="286" y="65" width="76" height="172" rx="3" fill="#111" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
+  <rect x="296" y="75" width="56" height="122" rx="2" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="306" y1="124" x2="342" y2="124" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
+  <line x1="306" y1="130" x2="342" y2="130" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
+  <circle cx="324" cy="65" r="5.5" fill="#111" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <circle cx="324" cy="237" r="5.5" fill="#111" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <text x="324" y="145" text-anchor="middle" font-family="monospace" font-size="7.5" fill="rgba(255,255,255,0.22)" transform="rotate(-90,324,145)">IH-1500</text>
+  <!-- Right dimension annotation -->
+  <line x1="366" y1="65" x2="378" y2="65" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <line x1="366" y1="237" x2="378" y2="237" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <line x1="372" y1="68" x2="372" y2="234" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="387" y="155" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.3)">320mm</text>
+  <!-- Water cooling connections (left) -->
+  <line x1="50" y1="115" x2="22" y2="115" stroke="rgba(80,160,255,0.22)" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="50" y1="185" x2="22" y2="185" stroke="rgba(80,160,255,0.22)" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="12" y="152" text-anchor="middle" font-family="monospace" font-size="6" fill="rgba(80,160,255,0.3)" transform="rotate(-90,12,152)">H₂O</text>
+  <!-- Spec badges -->
+  <rect x="50" y="284" width="70" height="22" rx="2" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+  <text x="85" y="292" text-anchor="middle" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.2)">CAPACITANCE</text>
+  <text x="85" y="302" text-anchor="middle" font-family="monospace" font-size="8.5" fill="rgba(255,255,255,0.4)">1000µF</text>
+  <rect x="132" y="284" width="70" height="22" rx="2" fill="rgba(204,20,20,0.06)" stroke="rgba(204,20,20,0.25)" stroke-width="1"/>
+  <text x="167" y="292" text-anchor="middle" font-family="monospace" font-size="6" fill="rgba(204,20,20,0.45)">VOLTAGE</text>
+  <text x="167" y="302" text-anchor="middle" font-family="monospace" font-size="8.5" fill="rgba(204,20,20,0.7)">1500V</text>
+  <rect x="214" y="284" width="70" height="22" rx="2" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+  <text x="249" y="292" text-anchor="middle" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.2)">FREQUENCY</text>
+  <text x="249" y="302" text-anchor="middle" font-family="monospace" font-size="8.5" fill="rgba(255,255,255,0.4)">10kHz</text>
+  <rect x="296" y="284" width="70" height="22" rx="2" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
+  <text x="331" y="292" text-anchor="middle" font-family="monospace" font-size="6" fill="rgba(255,255,255,0.2)">TAN δ</text>
+  <text x="331" y="302" text-anchor="middle" font-family="monospace" font-size="8.5" fill="rgba(255,255,255,0.4)">≤0.4%</text>
+  <!-- Series label -->
+  <text x="220" y="20" text-anchor="middle" font-family="monospace" font-size="7.5" fill="rgba(255,255,255,0.15)" letter-spacing="1.5">IH SERIES — RESONANT CAPACITOR BANK</text>
+</svg>`;
 
 /* ── Helpers ─────────────────────────────────────────────── */
 function set(id, html) {
@@ -158,6 +227,7 @@ function renderFooter(site) {
       <div class="footer-grid">
         <div class="footer-brand">
           ${logoLink('index.html', site.company)}
+          ${site.company_alt ? `<p class="footer-alt-name">${site.company_alt}</p>` : ''}
           <p>${site.tagline}</p>
         </div>
         ${cols}
@@ -174,26 +244,81 @@ function renderFooter(site) {
 
 /* ── Page renderers ──────────────────────────────────────── */
 function renderHome(d) {
+  /* Hero — copy column + technical visual */
   const h = d.hero;
   set('hero', `
-    <span class="hero-eyebrow">${h.eyebrow}</span>
-    <h1 class="hero-title">${h.title}</h1>
-    <p class="hero-subtitle">${h.subtitle}</p>
-    <div class="hero-actions">${h.cta.map(btn).join('')}</div>`);
+    <div class="hero-copy">
+      <span class="hero-eyebrow">${h.eyebrow}</span>
+      <h1 class="hero-title">${h.title}</h1>
+      <p class="hero-subtitle">${h.subtitle}</p>
+      <div class="hero-actions">${h.cta.map(btn).join('')}</div>
+      ${h.chips ? `<div class="hero-chips">${h.chips.map(c => `<span class="hero-chip">${c}</span>`).join('')}</div>` : ''}
+    </div>
+    <div class="hero-visual" aria-hidden="true">${HERO_SVG}</div>`);
 
+  /* Stats bar */
   set('stats', d.stats.map(s => `
     <div>
       <div class="stat-number" data-count="${s.value}" data-suffix="${s.suffix}">0${s.suffix}</div>
       <div class="stat-label">${s.label}</div>
     </div>`).join(''));
 
+  /* Product lines */
   const f = d.features;
+  set('features-header', `
+    <div class="tag">${f.tag}</div>
+    <h2 class="section-title">${f.title}</h2>`);
   set('features', `
     <div class="features-grid">${f.items.map(i => featureCard(i, true)).join('')}</div>`);
 
+  /* Applications */
+  if (d.applications) {
+    const ap = d.applications;
+    set('applications-header', `
+      <div class="tag">${ap.tag}</div>
+      <h2 class="section-title">${ap.title}</h2>
+      ${ap.lead ? `<p class="section-lead">${ap.lead}</p>` : ''}`);
+    set('applications-grid', ap.items.map(item => `
+      <div class="application-tile fade-up">
+        <div class="application-icon">${icon(item.icon)}</div>
+        <h3>${item.title}</h3>
+        <p>${item.body}</p>
+      </div>`).join(''));
+  }
+
+  /* Trust / Quality */
+  if (d.trust) {
+    const tr = d.trust;
+    set('trust-header', `
+      <div class="tag">${tr.tag}</div>
+      <h2 class="section-title">${tr.title}</h2>
+      ${tr.lead ? `<p class="section-lead">${tr.lead}</p>` : ''}`);
+    set('trust-grid', tr.items.map(item => `
+      <div class="trust-card fade-up">
+        <div class="trust-icon">${icon(item.icon)}</div>
+        <h3>${item.title}</h3>
+        <p>${item.body}</p>
+      </div>`).join(''));
+  }
+
+  /* Process / Sourcing flow */
+  if (d.process) {
+    const pr = d.process;
+    set('process-header', `
+      <div class="tag">${pr.tag}</div>
+      <h2 class="section-title">${pr.title}</h2>`);
+    set('process-steps', pr.steps.map((s, i) => `
+      <div class="process-step fade-up"${i < pr.steps.length - 1 ? ' data-connector="true"' : ''}>
+        <div class="process-num">${s.number}</div>
+        <h3>${s.title}</h3>
+        <p>${s.body}</p>
+      </div>`).join(''));
+  }
+
+  /* About teaser */
   const a = d.about_teaser;
   set('about-teaser', `
-    <div class="split-img fade-up">${imgOrPlaceholder(a.image, 'Our team', 'image')}</div>
+    <div class="split-img fade-up">${imgOrPlaceholder(a.image, 'Our facility', 'building')}</div>
     <div class="fade-up">
       <div class="tag">${a.tag}</div>
       <h2 class="section-title">${a.title}</h2>
@@ -201,13 +326,14 @@ function renderHome(d) {
       ${btn(a.cta)}
     </div>`);
 
+  /* Products preview */
   const pp = d.products_preview;
   set('products-header', `
     <div class="tag">${pp.tag}</div>
     <h2 class="section-title">${pp.title}</h2>
     <p class="section-lead">${pp.lead}</p>`);
-
   set('products-cta', btn(pp.cta));
+
   set('cta', ctaBanner(d.cta));
 }
 

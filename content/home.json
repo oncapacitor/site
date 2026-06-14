@@ -6,6 +6,12 @@
     "cta": [
       { "label": "Explore Products", "href": "products.html", "style": "btn-primary" },
       { "label": "Request a Quote",  "href": "contact.html",  "style": "btn-outline" }
+    ],
+    "chips": [
+      "100% Factory Tested",
+      "GB/T & IEC Compliant",
+      "Ships to 50+ Countries",
+      "20+ Years Engineering"
     ]
   },
   "stats": [
@@ -23,25 +29,115 @@
         "icon":     "zap",
         "subtitle": "Induction Furnace Capacitors",
         "title":    "Induction Heating",
-        "body":     "Designed for series and parallel resonance circuits in medium and high-frequency induction heating and melting systems.",
+        "body":     "Resonant tank capacitors for series and parallel circuits in medium and high-frequency induction heating and melting systems. Water-cooled or dry-type.",
         "image":    "images/cat-induction.jpg",
         "href":     "products.html#induction-heating"
       },
       {
         "icon":     "shield",
-        "subtitle": "Pulsed Power for Fusion Energy",
+        "subtitle": "Pulsed Power Capacitors",
         "title":    "Pulse Capacitors",
-        "body":     "High-energy, fast-discharge pulse capacitors for nuclear fusion research and pulsed power systems. Sub-microsecond discharge.",
+        "body":     "High-energy, fast-discharge capacitors for nuclear fusion research and pulsed power systems. Sub-microsecond discharge, up to 100kJ per shot.",
         "image":    "images/cat-pulse.jpg",
         "href":     "products.html#pulse-capacitors"
       },
       {
         "icon":     "grid",
-        "subtitle": "Capacitors for Power Substations",
+        "subtitle": "Power Factor Correction",
         "title":    "High Voltage",
-        "body":     "Power factor correction and filtration solutions for power systems up to 35 kV class. GB/T and IEC compliant.",
+        "body":     "Shunt capacitors and PFC banks for industrial power systems up to 35kV class. Reduces reactive power losses and improves grid stability.",
         "image":    "images/cat-hv.jpg",
         "href":     "products.html#high-voltage"
+      }
+    ]
+  },
+  "applications": {
+    "tag":   "Who We Serve",
+    "title": "Matched to Your Application. Ready to Source.",
+    "lead":  "Our products cover the specific technical requirements of industrial buyers across induction heating, power generation, and energy research.",
+    "items": [
+      {
+        "icon":  "zap",
+        "title": "Induction Heating OEMs",
+        "body":  "Resonant tank and high-frequency capacitors for manufacturers of induction heating and hardening equipment operating from 1kHz to 200kHz."
+      },
+      {
+        "icon":  "flame",
+        "title": "Metal Melting & Foundries",
+        "body":  "Coreless and channel induction furnace capacitor banks rated for continuous heavy-load melting of steel, aluminum, copper, and specialty alloys."
+      },
+      {
+        "icon":  "tool",
+        "title": "Plant & Process Engineers",
+        "body":  "Direct technical support for matching capacitor ratings — voltage, capacitance, frequency, cooling method — to your existing or new system design."
+      },
+      {
+        "icon":  "package",
+        "title": "Industrial Sourcing & Procurement",
+        "body":  "Consistent supply, full export documentation, and order flexibility from prototype quantities through annual volume programs."
+      },
+      {
+        "icon":  "grid",
+        "title": "Power System Integrators",
+        "body":  "High-voltage shunt capacitors and PFC banks for industrial substations. Rated to GB/T 11024 and IEC 60871 for international projects."
+      },
+      {
+        "icon":  "globe",
+        "title": "Export & International OEMs",
+        "body":  "English-language technical documentation, export-ready packaging, and reliable delivery to over 50 countries. CE and RoHS support available."
+      }
+    ]
+  },
+  "trust": {
+    "tag":   "Quality & Standards",
+    "title": "Engineered to Specification. Tested Before Delivery.",
+    "lead":  "Every unit passes factory acceptance testing before shipment. Our processes follow stringent quality protocols across all product lines.",
+    "items": [
+      {
+        "icon":  "shield",
+        "title": "100% Factory Acceptance Testing",
+        "body":  "Every capacitor is tested for high-voltage withstand, capacitance value, and dielectric loss angle (tan δ) prior to release. Test reports provided on request."
+      },
+      {
+        "icon":  "award",
+        "title": "GB/T & IEC Compliant",
+        "body":  "Products manufactured to Chinese National Standard (GB/T) and IEC equivalent specifications for acceptance in international markets and export projects."
+      },
+      {
+        "icon":  "file-text",
+        "title": "Full Technical Documentation",
+        "body":  "Datasheets, dimensional drawings, test certificates, and conformance documents provided with every order. Engineering clarification available."
+      },
+      {
+        "icon":  "thermometer",
+        "title": "Thermal & Electrical Durability",
+        "body":  "Stable capacitance across full operating temperature range, low dielectric losses, and proven service life under continuous industrial duty cycles."
+      }
+    ]
+  },
+  "process": {
+    "tag":   "How to Source",
+    "title": "From Specification to Delivery",
+    "steps": [
+      {
+        "number": "01",
+        "title":  "Identify Your Application",
+        "body":   "Select the product line — induction heating, pulse power, or high-voltage PFC — based on your system type and operating frequency."
+      },
+      {
+        "number": "02",
+        "title":  "Match Your Ratings",
+        "body":   "Compare voltage (kV), capacitance (µF), current rating (A), frequency (kHz), and cooling method against your system specification."
+      },
+      {
+        "number": "03",
+        "title":  "Review the Datasheet",
+        "body":   "Download dimensional drawings and electrical parameters. Our engineering team is available for technical questions and custom requirements."
+      },
+      {
+        "number": "04",
+        "title":  "Request a Quote",
+        "body":   "Submit your application details, required ratings, quantity, and delivery location. We respond with pricing within one business day."
       }
     ]
   },
@@ -49,10 +145,10 @@
     "tag":   "Our Story",
     "title": "Decades of Expertise in Capacitor Technology",
     "body":  [
-      "On Capacitor was founded on a simple belief: that precision-engineered energy storage components should be accessible to every engineer, researcher, and manufacturer who needs them.",
-      "From our facility, we design and manufacture capacitor systems that power everything from industrial automation to cutting-edge research equipment — with the same commitment to quality on every order."
+      "On Capacitor was founded on a simple principle: that precision-engineered capacitors for demanding industrial applications should be backed by real engineering support — not just a catalogue.",
+      "From our manufacturing facility, we design and produce capacitor systems that power induction furnaces, fusion research equipment, and industrial power grids — with full documentation and consistent quality on every order."
     ],
-    "cta":   { "label": "Learn About Us", "href": "about.html", "style": "btn-primary" },
+    "cta":   { "label": "About the Company", "href": "about.html", "style": "btn-primary" },
     "image": "images/about-team.jpg"
   },
   "products_preview": {
@@ -63,7 +159,7 @@
   },
   "cta": {
     "title": "Ready to Power Your Next Project?",
-    "body":  "Talk to our engineering team and find the right capacitor solution for your application.",
+    "body":  "Tell us your application, operating frequency, voltage, and capacitance requirements. Our team will respond within one business day.",
     "actions": [
       { "label": "Request a Quote", "href": "contact.html",  "style": "btn-primary" },
       { "label": "Browse Products", "href": "products.html", "style": "btn-outline" }

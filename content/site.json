@@ -1,43 +1,41 @@
 {
   "company": "On Capacitor",
-  "tagline": "Precision capacitor solutions for industrial, commercial, and research applications worldwide.",
+  "company_alt": "OuNeng",
+  "tagline": "Precision capacitor solutions for induction heating, melting, and power systems worldwide.",
   "email": "info@oncapacitor.com",
-  "phone": "+1 (555) 000-0000",
-  "location": "Your City, State, Country",
+  "phone": "+86 XXX XXXX XXXX",
+  "location": "China",
   "nav": [
-    { "label": "Home",     "href": "index.html" },
-    { "label": "About Us", "href": "about.html" },
-    { "label": "Products", "href": "products.html" }
+    { "label": "Products",    "href": "products.html" },
+    { "label": "About",       "href": "about.html" },
+    { "label": "Contact",     "href": "contact.html" }
   ],
   "footer_columns": [
     {
       "heading": "Company",
       "links": [
-        { "label": "About Us", "href": "about.html" },
-        { "label": "Products", "href": "products.html" },
-        { "label": "Contact",  "href": "contact.html" }
+        { "label": "About Us",    "href": "about.html" },
+        { "label": "Contact",     "href": "contact.html" }
       ]
     },
     {
       "heading": "Products",
       "links": [
-        { "label": "Film Capacitors", "href": "products.html" },
-        { "label": "Electrolytic",    "href": "products.html" },
-        { "label": "Supercapacitors", "href": "products.html" },
-        { "label": "Custom Modules",  "href": "products.html" }
+        { "label": "Induction Heating Capacitors", "href": "products.html#induction-heating" },
+        { "label": "Pulse Capacitors",             "href": "products.html#pulse-capacitors" },
+        { "label": "High Voltage Capacitors",      "href": "products.html#high-voltage" }
       ]
     },
     {
       "heading": "Contact",
       "links": [
         { "label": "info@oncapacitor.com", "href": "mailto:info@oncapacitor.com" },
-        { "label": "Send a Message",       "href": "contact.html" }
+        { "label": "Request a Quote",      "href": "contact.html" }
       ]
     }
   ],
   "social": [
-    { "label": "LinkedIn", "href": "#", "icon": "linkedin" },
-    { "label": "Twitter",  "href": "#", "icon": "twitter" }
+    { "label": "LinkedIn", "href": "#", "icon": "linkedin" }
   ],
-  "copyright": "On Capacitor. All rights reserved."
+  "copyright": "On Capacitor (OuNeng). All rights reserved."
 }

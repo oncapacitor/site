@@ -1120,12 +1120,193 @@ ul { list-style: none; }
 }
 .fade-up.visible { opacity: 1; transform: none; }
 
+/* ── Section header utility ───────────────────────────────── */
+.section-header {
+  margin-bottom: 52px;
+}
+.section-header .section-title { margin-bottom: 12px; }
+
+/* ── Hero split layout ────────────────────────────────────── */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.hero-copy { flex: 1; min-width: 0; }
+.hero-visual {
+  display: none;
+  flex: 0 0 440px;
+  opacity: 0.9;
+}
+.hero-visual svg { width: 100%; height: auto; display: block; }
+
+/* Hero proof chips */
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 13px 5px 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.48);
+  background: rgba(255,255,255,0.03);
+}
+.hero-chip::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+/* ── Applications / Who We Serve ──────────────────────────── */
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--bg-border);
+  border-left: 1px solid var(--bg-border);
+}
+.application-tile {
+  padding: 36px 28px;
+  border-right: 1px solid var(--bg-border);
+  border-bottom: 1px solid var(--bg-border);
+  transition: background var(--transition);
+}
+.application-tile:hover { background: rgba(255,255,255,0.025); }
+.application-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--red);
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+.application-icon svg { width: 100%; height: 100%; }
+.application-tile h3 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 9px;
+  letter-spacing: 0.01em;
+}
+.application-tile p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── Trust / Quality cards ────────────────────────────────── */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.trust-card {
+  padding: 32px;
+  border: 1px solid var(--bg-border);
+  background: var(--bg-surface);
+  border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+.trust-card:hover { border-color: rgba(204,20,20,0.3); }
+.trust-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  background: var(--red-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  margin-bottom: 18px;
+}
+.trust-icon svg { width: 20px; height: 20px; }
+.trust-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+.trust-card p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── Process / Sourcing flow ──────────────────────────────── */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--bg-border);
+  border-left: 1px solid var(--bg-border);
+}
+.process-step {
+  padding: 36px 28px;
+  border-right: 1px solid var(--bg-border);
+  border-bottom: 1px solid var(--bg-border);
+}
+.process-num {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--red);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+  opacity: 0.85;
+}
+.process-step h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+.process-step p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Footer alt name (Chinese) */
+.footer-alt-name {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.2) !important;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
 /* ── Responsive ───────────────────────────────────────────── */
+@media (min-width: 1024px) {
+  .hero-visual { display: block; }
+}
+
 @media (max-width: 900px) {
   .split { grid-template-columns: 1fr; gap: 40px; }
   .split.reverse { direction: ltr; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .applications-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 860px) {
@@ -1170,4 +1351,8 @@ ul { list-style: none; }
   .cta-actions { flex-direction: column; align-items: center; }
   .cta-actions .btn { width: 100%; max-width: 300px; justify-content: center; }
   .features-grid { grid-template-columns: 1fr; }
+  .applications-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .hero-chips { gap: 6px; }
 }
