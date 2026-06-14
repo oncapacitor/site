@@ -6,6 +6,7 @@
   "phone": "+86 XXX XXXX XXXX",
   "location": "China",
   "nav": [
+    { "label": "Home",        "href": "index.html" },
     { "label": "Products",    "href": "products.html" },
     { "label": "About",       "href": "about.html" },
     { "label": "Contact",     "href": "contact.html" }
