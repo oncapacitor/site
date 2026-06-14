@@ -1285,6 +1285,113 @@ ul { list-style: none; }
   line-height: 1.65;
 }
 
+/* ── Light-section component overrides ────────────────────── */
+
+/* Applications grid */
+.section--alt .applications-grid,
+.section--white .applications-grid {
+  border-color: var(--light-border);
+}
+.section--alt .application-tile,
+.section--white .application-tile {
+  border-color: var(--light-border);
+}
+.section--alt .application-tile:hover,
+.section--white .application-tile:hover {
+  background: rgba(0,0,0,0.03);
+}
+.section--alt .application-tile h3,
+.section--white .application-tile h3 {
+  color: var(--text-on-lt);
+}
+.section--alt .application-tile p,
+.section--white .application-tile p {
+  color: var(--text-muted-lt);
+}
+
+/* Trust cards */
+.section--alt .trust-card,
+.section--white .trust-card {
+  background: var(--light-card);
+  border-color: var(--light-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.section--alt .trust-card:hover,
+.section--white .trust-card:hover {
+  border-color: rgba(204,20,20,0.25);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.section--alt .trust-card h3,
+.section--white .trust-card h3 {
+  color: var(--text-on-lt);
+}
+.section--alt .trust-card p,
+.section--white .trust-card p {
+  color: var(--text-muted-lt);
+}
+
+/* Process steps */
+.section--alt .process-steps,
+.section--white .process-steps {
+  border-color: var(--light-border);
+}
+.section--alt .process-step,
+.section--white .process-step {
+  border-color: var(--light-border);
+}
+.section--alt .process-step h3,
+.section--white .process-step h3 {
+  color: var(--text-on-lt);
+}
+.section--alt .process-step p,
+.section--white .process-step p {
+  color: var(--text-muted-lt);
+}
+
+/* Products grid on light */
+.section--alt .products-grid,
+.section--white .products-grid {
+  background: var(--light-border);
+  border-color: var(--light-border);
+}
+.section--alt .product-card,
+.section--white .product-card {
+  background: var(--light-card);
+}
+.section--alt .product-card:hover,
+.section--white .product-card:hover {
+  background: var(--light-bg);
+}
+.section--alt .product-card h3,
+.section--white .product-card h3 {
+  color: var(--text-on-lt);
+}
+.section--alt .product-card p,
+.section--white .product-card p {
+  color: var(--text-muted-lt);
+}
+.section--alt .product-card-img,
+.section--white .product-card-img {
+  background: #e8e8e8;
+}
+.section--alt .product-card-img .placeholder-img,
+.section--white .product-card-img .placeholder-img {
+  background: #e8e8e8;
+  color: rgba(0,0,0,0.15);
+}
+
+/* Split (about teaser) on light */
+.section--alt .split-img .placeholder-img,
+.section--white .split-img .placeholder-img {
+  background: #e8e8e8;
+  color: rgba(0,0,0,0.15);
+  border-color: var(--light-border);
+}
+.section--alt .split p,
+.section--white .split p {
+  color: var(--text-muted-lt);
+}
+
 /* Footer alt name (Chinese) */
 .footer-alt-name {
   font-size: 0.72rem !important;
