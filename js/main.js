@@ -147,11 +147,9 @@ function ctaBanner(d) {
 }
 
 function logoLink(href = 'index.html', company = 'On Capacitor') {
-  const [first, ...rest] = company.split(' ');
   return `
     <a href="${href}" class="nav-logo">
-      ${LOGO_SVG}
-      ${first}<span class="accent">${rest.join(' ')}</span>
+      <img src="assets/Logo_Variants_Compact.jpeg" alt="${company}" class="nav-logo-img">
     </a>`;
 }
 

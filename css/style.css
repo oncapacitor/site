@@ -262,6 +262,7 @@ ul { list-style: none; }
 }
 .nav-logo svg { width: auto; height: 28px; }
 .nav-logo span.accent { color: var(--white); opacity: 0.6; }
+.nav-logo-img { height: 36px; width: auto; display: block; }
 
 .nav-links {
   display: flex;
